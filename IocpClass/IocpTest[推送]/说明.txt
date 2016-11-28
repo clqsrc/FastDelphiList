@@ -1,0 +1,12 @@
+
+应用代码在主窗体和 uTPushThread 中,其余是框架,不用理会.
+
+可用 telnet 127.0.0.1 8090 简单测试一下服务器.
+
+在子目录 "IocpTest[推送]" 中.
+
+推送的数据用 SetPushData 或 SetPushString 函数,前者可推送二进制内容,后者可推送字符串.
+用 ClearPushData 清空要推送的内容,推送线程会停止发送.
+
+客户端发送的内容可在 OnRecvDataClass 事件中得到.
+

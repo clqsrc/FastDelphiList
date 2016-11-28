@@ -1,0 +1,422 @@
+unit uHttpRequest;
+
+
+//DecodeRequest
+//因为多个服务器用到了 http 接口,所以独立一个简单的实现出来
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  iocpInterfaceClass,  Winsock2_v2, DateUtils, StrUtils,
+  HTTPApp,
+  Dialogs, StdCtrls;
+
+type
+  THttpRequest = class(TObject)
+    //首行是很重要的
+    firstLine:string;
+    fileName:string;
+    //不带参数的
+    fileNamePure:string;
+    //请求列表键值对
+    requestList:TStrings;
+    //头信息键值对
+    heads:TStrings;
+    //post的内容
+    postList:TStrings;
+  public
+    constructor Create;
+    destructor Destroy; override;//;overload;// 2015-4-18 15:57:54//overload和override的区别,overload重载是:在同一个类中.override重写是:在子类中重写父类的方法
+
+  end;
+
+
+//解码请求  
+function DecodeRequest(const sRquest:string):THttpRequest;
+
+//直接在 OnRecvDataClass 这样的事件中解码 http//解码到完整的 http 请求头才修改 useDataLen 的值
+function DecodeRequest_OnRecvDataClass(buf: PChar; bufLen:Integer; var useDataLen: Integer):THttpRequest;
+//解码请求
+procedure DecodeRange(s:string; var rangeBegin:Integer; var rangeEnd:Integer);
+
+implementation
+
+
+//简单地判断一下是不是 http 请求,仅仅用于本工程性质,不通用
+function IsHttpRequest_OnRecvDataClass(buf: PChar; bufLen:Integer):Boolean;
+var
+  strBuf:string;
+  checkHead:string;
+  checkLen:Integer;//要检查的长度
+
+  //是否是某个 Method//好处算法有点复杂
+  function IsMethod(const Method:string):Boolean;
+  begin
+    Result := False;
+
+    checkHead := Method;
+    
+    checkLen := Length(checkHead);
+    if bufLen>checkLen then
+    begin
+      SetLength(strBuf, checkLen);
+      CopyMemory(@strBuf[1], buf, checkLen);
+
+      if UpperCase(checkHead)=UpperCase(strBuf) then
+      begin
+        Result := True;
+        //Exit;
+      end;
+    end;
+  end;
+  
+begin
+  Result := False;
+  SetLength(strBuf, 0);//最好是有这个,在多线程环境中安全点
+
+  //checkHead := 'GET ';
+  if IsMethod('GET ') then begin Result := True; Exit; end;
+  if IsMethod('POST ') then begin Result := True; Exit; end;
+  //if IsMethod('GET ') then begin Result := True; Exit; end;
+  //if IsMethod('GET ') then begin Result := True; Exit; end;
+
+end;
+
+//解码出内容
+procedure DecodeContent(const content:string; request:THttpRequest);
+var
+  i:Integer;
+  s:string;
+begin
+
+  //--------------------------------------------------
+  //应该要先替换掉所有的换行
+  s := StringReplace(content, #13#10, '', [rfReplaceAll]);
+  s := StringReplace(content, #13, '', [rfReplaceAll]);//这两个按标准可以不要
+  s := StringReplace(content, #10, '', [rfReplaceAll]);//这两个按标准可以不要
+
+  //--------------------------------------------------
+
+  request.postList.Text := StringReplace(content, '&', #13#10, [rfReplaceAll]);
+
+  for i := 0 to request.postList.Count-1 do
+  begin
+    //request.postList.ValueFromIndex[i] := '';
+    request.postList.Strings[i] := HTTPApp.HTTPDecode(request.postList.Strings[i]);
+  end;
+
+end;
+
+//检查 http 请求是否结束了//似乎应该是检查是否有两个位置不同的 CRLF:第一个为报头的,第二个为整体的(?)
+//本来可判断最末是否为 CRLF 的,但是如果是长连接的话就不正确了,所以还是检查两个好了(太啰嗦?)
+
+function DecodeRequest_OnRecvDataClass(buf: PChar; bufLen:Integer; var useDataLen: Integer):THttpRequest;
+var
+  strBuf:string;
+  headEndPos:Integer;
+  headLen:Integer;//头信息的长度
+  contentLength:Integer;//内容长度
+  head:string;//头内容
+  content:string;//内容实体
+begin
+  Result := nil;
+
+  if IsHttpRequest_OnRecvDataClass(buf, bufLen)=False then Exit;
+
+  if bufLen<4 then Exit;
+
+  {
+  //AnsiStrPos()
+  StrPos()
+  StrScan()
+  headLen := str;
+
+
+  //if StrLComp(buf + (bufLen - 1)-4, #13#10#13#10, 4) = 0 then
+  if StrLComp(buf + (bufLen - 0)-4, #13#10#13#10, 4) = 0 then
+  begin//相同时
+    //SetLength(strBuf, bufLen);
+    //CopyMemory(@strBuf[1], buf, bufLen);
+    strBuf := GetBufString(buf, bufLen);
+
+    MessageBox(0, PChar(inttostr(Pos(#13#10#13#10, strBuf))), '', 0);
+
+
+    Result := DecodeRequest(strBuf);
+    Result.heads.Values['Content-Length'];
+
+
+    //Content-Length 存在的话还要收数据体
+
+    //如果就是最后一个 #13#10#13#10 那说明还只是头//不对,会有一个  #13#10#13#10 ,当有 transfer-length 和 Content-Length 时则直接指明长度,后面不再有 CRLF
+    //所以正确的算法应当是,如果结尾不是 CRLF 则要计算头信息取到什么位置
+    //if Pos(#13#10#13#10, strBuf)=bufLen-4 then Exit;
+    if Pos(#13#10#13#10, strBuf)=(bufLen-4)-1 then Exit;
+
+  end;
+  //if buf[]
+
+  //PosEx()
+  }
+
+  //算了,用个简单的吧
+  strBuf := GetBufString(buf, bufLen);
+
+  headEndPos := Pos(#13#10#13#10, strBuf);
+  if headEndPos<1 then Exit;
+
+  headLen := (headEndPos - 1 + 4);
+  head := Copy(strBuf, 1, headLen);
+
+  //解码头
+  //Result := DecodeRequest(strBuf);
+  Result := DecodeRequest(head);
+
+  if Result.heads.Values['Content-Length']<>'' then
+  begin
+    contentLength := StrToIntDef(Result.heads.Values['Content-Length'], 0);
+
+    //如果收到了所有的内容(头和实体)则清空当次连接的内容
+    if bufLen >= headLen + contentLength then
+    begin
+      useDataLen := headLen + contentLength;
+
+      content := Copy(strBuf, headLen+1, contentLength);
+      //MessageBox(0, PChar(content), '', 0);
+
+      //解码实体
+      DecodeContent(content, Result);
+      //MessageBox(0, PChar(Result.postList.Text), '', 0);
+    end
+    else//这个是比较重要的,如果还没有收完应当是不返回 Result 实体的
+    begin
+      Result.Free;
+      Result := nil;
+    end;  
+
+  end
+  else
+  begin//这时应该是 get 请求
+    //useDataLen := bufLen;
+    useDataLen := headLen;
+  end;
+
+end;
+
+//解码请求
+procedure DecodeRange(s:string; var rangeBegin:Integer; var rangeEnd:Integer);
+var
+  sl:TStringList;
+  fLine:string;
+  i:Integer;
+  fn:string;
+  fb,lb:Boolean;//首空白和尾空白找到的标志
+
+  param:string;
+  pb:Boolean;//找到参数的标志
+  bf:Boolean;//找到起始字符了
+  s1:string;
+  s2:string;
+  //当前的范围
+  curRange1,curRange2:Integer;
+
+begin
+  //rangeBegin := 0;
+  //rangeEnd := 0;// 2015/7/9 14:14:50 不对, http 下载协议中 0 是有意义的,如果两者都是 0 表示的下载第 1 个字节!所以初始应当为 -1
+  rangeBegin := -1;
+  rangeEnd := -1;
+
+  bf := False;
+  s1 := '';
+  s2 := '';
+
+  s := StringReplace(s, ' ', '', []);
+  s := StringReplace(s, 'bytes=', '', []);
+
+
+  for i := 1 to Length(s) do
+  begin
+    if bf = False then
+    begin
+      //得到当前的范围
+      if s[i]='-' then
+      begin
+        bf := True;
+        Continue;
+      end;
+
+      s1 := s1 + s[i];
+    end
+    else
+    begin
+      s2 := s2 + s[i];
+
+    end;
+  end;
+
+  //curRange1 := StrToIntDef(s1, 0);
+  //curRange2 := StrToIntDef(s2, 0);// 2015/7/9 14:16:07 错误,原因同初始化时...
+
+  curRange1 := StrToIntDef(s1, -1);
+  curRange2 := StrToIntDef(s2, -1);
+
+  rangeBegin := curRange1;
+  rangeEnd := curRange2;
+
+  // 2015/7/9 14:16:54 后面不应当纠正了,如果原始值有误应当在应用层修复
+  //if (curRange2>curRange1)and(curRange1>=0) then
+  //begin
+  //  //curPos := curRange2;
+  //  //curSize := curRange2 - curRange1;
+  //  rangeBegin := curRange1;
+  //  rangeEnd := curRange2;
+  //end;
+
+end;
+
+
+//解码请求
+function DecodeRequest(const sRquest:string):THttpRequest;
+var
+  sl:TStringList;
+  fLine:string;
+  i:Integer;
+  fn:string;
+  fb,lb:Boolean;//首空白和尾空白找到的标志
+
+  param:string;
+  pb:Boolean;//找到参数的标志
+begin
+  Result := nil;
+  fn := '';
+  fb := False; lb := False;
+  pb := False;
+
+  Result := THttpRequest.Create;
+  try
+    sl := TStringList.Create;
+
+    sl.Text := sRquest;
+
+    //第一行是文件名
+    fLine := sl.Strings[0];
+
+    for i := 1 to Length(fLine) do
+    begin
+      if (fLine[i] = ' ')and(fb = False) then
+      begin
+        fb :=True;
+        Continue;
+      end;
+
+      if (fLine[i] = ' ')and(lb = False) then
+      begin
+        lb :=True;
+        Continue;
+      end;
+
+      if (fb = True)and(lb = False) then
+      begin
+        fn := fn + fLine[i];
+      end;
+
+    end;
+
+    //文件名中可能带有参数
+    for i := 1 to Length(fn) do
+    begin
+      if (fn[i] = '?')and(pb = False) then
+      begin
+        pb :=True;
+        Continue;
+      end;
+
+      if (pb = True) then
+      begin
+        param := param + fn[i];
+      end
+      else
+      begin
+        //不带参数的文件名
+        Result.fileNamePure := Result.fileNamePure + fn[i];
+      end;
+
+    end;
+
+    //请求内容删除掉第一行后就是头信息啦
+    Result.firstLine := sl.Strings[0];
+    sl.Delete(0);
+
+    //sl.Text := StringReplace(sl.Text, ':', '=', [rfReplaceAll]);//不对,只能去掉第一个
+//    sl.Text := StringReplace(sl.Text, ': ', '=', []);//不对,只能去掉第一个
+//    sl.Text := StringReplace(sl.Text, ':', '=', []);//不对,只能去掉第一个
+
+    //--------------------------------------------------
+    //将首行外的 ':' 转换成 '=' 以便 values 操作
+
+    //for i := 1 to sl.Count-1 do
+    for i := 0 to sl.Count-1 do//第一行在前面已经删除了
+    begin
+      //sl.Text := StringReplace(sl.Text, ':', '=', [rfReplaceAll]);//不对,只能去掉第一个
+      sl.Strings[i] := StringReplace(sl.Strings[i], ': ', ':', []);//只能去掉第一个,先把带空格的变成不带空格的
+      sl.Strings[i] := StringReplace(sl.Strings[i], ':', '=', []);//只能去掉第一个
+
+    end;
+
+    //--------------------------------------------------
+
+    Result.heads.Text := sl.Text;
+
+
+  finally
+    sl.free;
+  end;
+
+
+  Result.fileName := fn;
+  Result.requestList.Text := StringReplace(param, '&', #13#10, [rfReplaceAll]);
+
+  //ShowMessage(Result.requestList.Values['a']);
+end;
+
+
+
+
+{ THttpRequest }
+
+constructor THttpRequest.Create;
+begin
+  firstLine := '';
+  fileName := '';
+  fileNamePure := '';
+  //请求列表键值对
+  requestList := TStringList.Create;
+  //头信息键值对
+  heads := TStringList.Create;
+  postList := TStringList.Create;
+
+
+end;
+
+destructor THttpRequest.Destroy;
+begin
+  //fileName:string;
+  //请求列表键值对
+  requestList.Free;
+  //头信息键值对
+  heads.Free;
+  postList.Free;
+
+
+
+  inherited;
+end;
+
+
+
+
+end.
+
+
+

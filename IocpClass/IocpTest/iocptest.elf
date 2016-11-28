@@ -1,0 +1,1439 @@
+EurekaLog 6.0.24
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 14 Apr 2015 10:28:22 +0800
+  1.2 Name/Description: iocptest.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Tue, 14 Apr 2015 10:28:22 +0800
+  1.6 Up Time         : 43 seconds
+
+Exception:
+-----------------------------------------------------
+  2.1 Date          : Tue, 14 Apr 2015 10:29:06 +0800
+  2.2 Address       : 77A712F7
+  2.3 Module Name   : 
+  2.4 Module Version: 
+  2.5 Type          : EExternalException
+  2.6 Message       : External exception C0000008.
+  2.7 ID            : 4752
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : Administrator
+  3.2 Name      : 
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeIncreaseQuotaPrivilege        - OFF
+                  SeTcbPrivilege                  - OFF
+                  SeSecurityPrivilege             - OFF
+                  SeTakeOwnershipPrivilege        - OFF
+                  SeLoadDriverPrivilege           - OFF
+                  SeSystemProfilePrivilege        - OFF
+                  SeSystemtimePrivilege           - OFF
+                  SeProfileSingleProcessPrivilege - OFF
+                  SeIncreaseBasePriorityPrivilege - OFF
+                  SeCreatePagefilePrivilege       - OFF
+                  SeBackupPrivilege               - OFF
+                  SeRestorePrivilege              - OFF
+                  SeShutdownPrivilege             - OFF
+                  SeDebugPrivilege                - OFF
+                  SeSystemEnvironmentPrivilege    - OFF
+                  SeChangeNotifyPrivilege         - ON
+                  SeRemoteShutdownPrivilege       - OFF
+                  SeUndockPrivilege               - OFF
+                  SeManageVolumePrivilege         - OFF
+                  SeImpersonatePrivilege          - ON
+                  SeCreateGlobalPrivilege         - ON
+                  SeIncreaseWorkingSetPrivilege   - OFF
+                  SeTimeZonePrivilege             - OFF
+                  SeCreateSymbolicLinkPrivilege   - OFF
+
+Active Controls:
+----------------------------------
+  4.1 Form Class   : Shell_TrayWnd
+  4.2 Form Text    : 
+  4.3 Control Class: 
+  4.4 Control Text : 
+
+Computer:
+-----------------------------------------------------------------------------------------------
+  5.1 Name          : 9LKL99GDDECFPQZ
+  5.2 Total Memory  : 4063 Mb
+  5.3 Free Memory   : 2368 Mb
+  5.4 Total Disk    : 139.01 Gb
+  5.5 Free Disk     : 34.46 Gb
+  5.6 System Up Time: 1 hour, 59 minutes, 22 seconds
+  5.7 Processor     : AMD Athlon(tm) 64 X2 Dual Core Processor 4200+
+  5.8 Display Mode  : 1366 x 768, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : NVIDIA GeForce 7025 / NVIDIA nForce 630a (driver 8.17.13.142 - RAM 32 MB)
+  5.11 Printer      : Microsoft XPS Document Writer (driver 6.1.7601.17514)
+
+Operating System:
+--------------------------------------------
+  6.1 Type    : Microsoft Windows 7 (64 bit)
+  6.2 Build # : 7601
+  6.3 Update  : Service Pack 1
+  6.4 Language: Chinese (Simplified)
+  6.5 Charset : 134
+
+Network:
+---------------------------------------------------------------------
+  7.1 IP Address: 192.168.001.233 - 192.168.011.001 - 192.168.220.001
+  7.2 Submask   : 255.255.255.000 - 255.255.255.000 - 255.255.255.000
+  7.3 Gateway   : 192.168.001.010 - 000.000.000.000 - 000.000.000.000
+  7.4 DNS 1     : 114.114.114.114 - 000.000.000.000 - 000.000.000.000
+  7.5 DNS 2     : 000.000.000.000 - 000.000.000.000 - 000.000.000.000
+  7.6 DHCP      : OFF             - OFF             - OFF            
+
+Call Stack Information:
+---------------------------------------------------------------------------------------------------------
+|Address |Module        |Unit                  |Class              |Procedure/Method           |Line    |
+---------------------------------------------------------------------------------------------------------
+|Running Thread: ID=1480; Priority=0; Class=; [Main]                                                    |
+|-------------------------------------------------------------------------------------------------------|
+|777BC44F|KERNELBASE.dll|                      |                   |CloseHandle                |        |
+|777BC428|KERNELBASE.dll|                      |                   |CloseHandle                |        |
+|004A9BAF|iocptest.exe  |uThreadLock.pas       |TThreadLock        |TerminateInThread          |82[2]   |
+|004A9BA8|iocptest.exe  |uThreadLock.pas       |TThreadLock        |TerminateInThread          |80[0]   |
+|004AB1FC|iocptest.exe  |iocpInterfaceClass.pas|TIocpClass         |Destroy                    |395[18] |
+|004AD268|iocptest.exe  |iocptest.dpr          |                   |                           |23[4]   |
+|-------------------------------------------------------------------------------------------------------|
+|                                                                                                       |
+|Running Thread: ID=4024; Priority=0; Class=TAcceptThread                                               |
+|-------------------------------------------------------------------------------------------------------|
+|75D02F7B|ws2_32.dll    |                      |                   |WahReferenceContextByHandle|        |
+|75D068D6|ws2_32.dll    |                      |                   |WSAAccept                  |        |
+|004AB0FC|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |334[83] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                    |1117[3] |
+|-------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=1480; Priority=0; Class=; [Main]                                                    |
+|-------------------------------------------------------------------------------------------------------|
+|004AC291|iocptest.exe  |iocpInterfaceClass.pas|TIocpClass         |StartService               |1226[22]|
+|004AC1D0|iocptest.exe  |iocpInterfaceClass.pas|TIocpClass         |StartService               |1204[0] |
+|004ACA94|iocptest.exe  |IocpTestMain.pas      |TForm1             |btnStartClick              |75[13]  |
+|77C2DFA5|ntdll.dll     |                      |                   |RtlFreeHeap                |        |
+|77C2E6A3|ntdll.dll     |                      |                   |RtlDeleteBoundaryDescriptor|        |
+|75C2792F|user32.dll    |                      |                   |CallWindowProcA            |        |
+|75C196C0|user32.dll    |                      |                   |SendMessageW               |        |
+|75C19679|user32.dll    |                      |                   |SendMessageW               |        |
+|77C52830|ntdll.dll     |                      |                   |RtlFillMemoryUlong         |        |
+|75C27945|user32.dll    |                      |                   |CallWindowProcA            |        |
+|75C2792F|user32.dll    |                      |                   |CallWindowProcA            |        |
+|77C22260|ntdll.dll     |                      |                   |RtlLeaveCriticalSection    |        |
+|75C22ABC|user32.dll    |                      |                   |GetCapture                 |        |
+|75C22AAC|user32.dll    |                      |                   |GetCapture                 |        |
+|75C17BC5|user32.dll    |                      |                   |DispatchMessageA           |        |
+|75C17BBB|user32.dll    |                      |                   |DispatchMessageA           |        |
+|004AD263|iocptest.exe  |iocptest.dpr          |                   |                           |22[3]   |
+|-------------------------------------------------------------------------------------------------------|
+|                                                                                                       |
+|Running Thread: ID=1004; Priority=0; Class=TServerWorkerThread                                         |
+|-------------------------------------------------------------------------------------------------------|
+|777B76F7|KERNELBASE.dll|                      |                   |GetQueuedCompletionStatus  |        |
+|004ABADC|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                        |856[24] |
+|004ABA6C|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                        |832[0]  |
+|004ABF7B|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Execute                    |1104[2] |
+|-------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                               |
+|-------------------------------------------------------------------------------------------------------|
+|004AAFF3|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |289[38] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                    |1117[3] |
+|-------------------------------------------------------------------------------------------------------|
+|                                                                                                       |
+|Running Thread: ID=4072; Priority=0; Class=TServerWorkerThread                                         |
+|-------------------------------------------------------------------------------------------------------|
+|777B76F7|KERNELBASE.dll|                      |                   |GetQueuedCompletionStatus  |        |
+|777BEF19|KERNELBASE.dll|                      |                   |VirtualQueryEx             |        |
+|004ABADC|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                        |856[24] |
+|004ABA6C|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                        |832[0]  |
+|004ABF7B|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Execute                    |1104[2] |
+|-------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                               |
+|-------------------------------------------------------------------------------------------------------|
+|004AAFF3|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |289[38] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                    |1117[3] |
+|-------------------------------------------------------------------------------------------------------|
+|                                                                                                       |
+|Running Thread: ID=1916; Priority=0; Class=TServerWorkerThread                                         |
+|-------------------------------------------------------------------------------------------------------|
+|777B76F7|KERNELBASE.dll|                      |                   |GetQueuedCompletionStatus  |        |
+|004ABADC|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                        |856[24] |
+|004ABA6C|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                        |832[0]  |
+|004ABF7B|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Execute                    |1104[2] |
+|-------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                               |
+|-------------------------------------------------------------------------------------------------------|
+|004AAFF3|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |289[38] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                    |1117[3] |
+|-------------------------------------------------------------------------------------------------------|
+|                                                                                                       |
+|Running Thread: ID=4288; Priority=0; Class=TServerWorkerThread                                         |
+|-------------------------------------------------------------------------------------------------------|
+|777B76F7|KERNELBASE.dll|                      |                   |GetQueuedCompletionStatus  |        |
+|004ABADC|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                        |856[24] |
+|004ABA6C|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                        |832[0]  |
+|004ABF7B|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Execute                    |1104[2] |
+|-------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                               |
+|-------------------------------------------------------------------------------------------------------|
+|004AAFF3|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |289[38] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                    |1117[3] |
+|-------------------------------------------------------------------------------------------------------|
+|                                                                                                       |
+|Running Thread: ID=1528; Priority=0; Class=TAcceptFastThread                                           |
+|-------------------------------------------------------------------------------------------------------|
+|777C3B63|KERNELBASE.dll|                      |                   |SleepEx                    |        |
+|777C4493|KERNELBASE.dll|                      |                   |Sleep                      |        |
+|004A9C79|iocptest.exe  |uThreadLock.pas       |TThreadLock        |Lock                       |162[27] |
+|004A9BF0|iocptest.exe  |uThreadLock.pas       |TThreadLock        |Lock                       |135[0]  |
+|004AC402|iocptest.exe  |iocpInterfaceClass.pas|TAcceptFastThread  |Execute                    |1337[18]|
+|-------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                               |
+|-------------------------------------------------------------------------------------------------------|
+|004AB06A|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |305[54] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer               |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                    |1117[3] |
+---------------------------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name          |Description                                     |Version         |Size    |Modified           |Path                                                                                                          |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|iocptest.exe  |                                                |                |827904  |2015-04-14 10:28:24|D:\gs_d\fy\src\3.0\IocpClass\IocpTest                                                                         |
+|711B0000|uxtheme.dll   |Microsoft UxTheme 库                            |6.1.7600.16385  |245760  |2009-07-14 09:11:26|C:\Windows\system32                                                                                           |
+|71BF0000|wsock32.dll   |Windows Socket 32-Bit DLL                       |6.1.7600.16385  |15360   |2009-07-14 09:16:22|C:\Windows\system32                                                                                           |
+|729F0000|wshtcpip.dll  |Winsock2 帮助程序 DLL (TL/IPv4)                 |6.1.7600.16385  |9216    |2009-07-14 09:16:22|C:\Windows\System32                                                                                           |
+|73650000|comctl32.dll  |公用控件库                                      |5.82.7601.17514 |530432  |2010-11-21 11:24:10|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af|
+|74070000|mswsock.dll   |Microsoft Windows Sockets 2.0 服务提供程序      |6.1.7601.17514  |232448  |2010-11-21 11:24:10|C:\Windows\system32                                                                                           |
+|75550000|version.dll   |Version Checking and File Installation Libraries|6.1.7600.16385  |21504   |2009-07-14 09:16:18|C:\Windows\system32                                                                                           |
+|75650000|CRYPTBASE.dll |Base cryptographic API DLL                      |6.1.7600.16385  |36864   |2009-07-14 09:15:08|C:\Windows\syswow64                                                                                           |
+|75660000|SspiCli.dll   |Security Support Provider Interface             |6.1.7601.17856  |96768   |2012-06-02 12:34:10|C:\Windows\syswow64                                                                                           |
+|75780000|sechost.dll   |Host for SCM/SDDL/LSA Lookup APIs               |6.1.7600.16385  |92160   |2009-07-14 09:16:14|C:\Windows\SysWOW64                                                                                           |
+|759A0000|oleaut32.dll  |                                                |6.1.7601.17676  |571904  |2011-08-27 12:26:28|C:\Windows\syswow64                                                                                           |
+|75A30000|IMM32.DLL     |Multi-User Windows IMM32 API Client DLL         |6.1.7601.17514  |119808  |2010-11-21 11:24:26|C:\Windows\system32                                                                                           |
+|75BF0000|NSI.dll       |NSI User-mode interface DLL                     |6.1.7600.16385  |8704    |2009-07-14 09:16:12|C:\Windows\syswow64                                                                                           |
+|75C00000|user32.dll    |多用户 Windows 用户 API 客户端 DLL              |6.1.7601.17514  |833024  |2010-11-21 11:24:22|C:\Windows\syswow64                                                                                           |
+|75D00000|ws2_32.dll    |Windows Socket 2.0 32 位 DLL                    |6.1.7601.17514  |206848  |2010-11-21 11:23:56|C:\Windows\syswow64                                                                                           |
+|75DC0000|LPK.dll       |Language Pack                                   |6.1.7600.16385  |25600   |2009-07-14 09:11:24|C:\Windows\syswow64                                                                                           |
+|75E70000|kernel32.dll  |Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |1114112 |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|75F80000|RPCRT4.dll    |远程过程调用运行时                              |6.1.7601.17514  |663040  |2010-11-21 11:24:12|C:\Windows\syswow64                                                                                           |
+|76090000|PSAPI.DLL     |Process Status Helper                           |6.1.7600.16385  |6144    |2009-07-14 09:16:14|C:\Windows\syswow64                                                                                           |
+|760B0000|ADVAPI32.dll  |高级 Windows 32 基本 API                        |6.1.7601.17514  |640512  |2010-11-21 11:24:30|C:\Windows\syswow64                                                                                           |
+|76640000|msvcrt.dll    |Windows NT CRT DLL                              |7.0.7601.17744  |690688  |2011-12-16 15:53:00|C:\Windows\syswow64                                                                                           |
+|76750000|ole32.dll     |用于 Windows 的 Microsoft OLE                   |6.1.7601.17514  |1414144 |2010-11-21 11:24:02|C:\Windows\syswow64                                                                                           |
+|76900000|USP10.dll     |Uniscribe Unicode script processor              |1.626.7601.17514|626176  |2010-11-21 11:24:18|C:\Windows\syswow64                                                                                           |
+|769A0000|shell32.dll   |Windows 外壳公用 DLL                            |6.1.7601.17859  |12873728|2012-06-09 12:41:02|C:\Windows\syswow64                                                                                           |
+|775F0000|SHLWAPI.dll   |外壳简易实用工具库                              |6.1.7601.17514  |350208  |2010-11-21 11:23:50|C:\Windows\syswow64                                                                                           |
+|77650000|GDI32.dll     |GDI Client DLL                                  |6.1.7601.17514  |311296  |2010-11-21 11:24:16|C:\Windows\syswow64                                                                                           |
+|776E0000|MSCTF.dll     |MSCTF 服务器 DLL                                |6.1.7600.16385  |828928  |2009-07-14 09:15:44|C:\Windows\syswow64                                                                                           |
+|777B0000|KERNELBASE.dll|Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |274944  |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|77C00000|ntdll.dll     |NT 层 DLL                                       |6.1.7601.17725  |1292080 |2011-11-17 13:38:40|C:\Windows\SysWOW64                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                            |Description                           |Version        |Memory|Priority    |Threads|Path                                                      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|0   |[System Process]                |                                      |               |0     |            |2      |                                                          |
+|4   |System                          |                                      |               |0     |Normal      |95     |                                                          |
+|248 |smss.exe                        |                                      |               |0     |Above-Normal|2      |                                                          |
+|368 |SearchIndexer.exe               |Microsoft Windows Search 索引器       |7.0.7600.16385 |0     |Normal      |11     |                                                          |
+|384 |csrss.exe                       |                                      |               |0     |High        |9      |                                                          |
+|424 |wininit.exe                     |Windows 启动应用程序                  |6.1.7600.16385 |0     |High        |3      |                                                          |
+|452 |csrss.exe                       |                                      |               |0     |High        |10     |                                                          |
+|492 |services.exe                    |                                      |               |0     |Normal      |7      |                                                          |
+|516 |winlogon.exe                    |                                      |               |0     |High        |3      |                                                          |
+|552 |lsass.exe                       |                                      |               |0     |Normal      |8      |                                                          |
+|564 |lsm.exe                         |                                      |               |0     |Normal      |9      |                                                          |
+|668 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |9      |                                                          |
+|740 |delphi32.exe                    |Delphi-32 Development Environment     |7.0.4.453      |0     |Normal      |13     |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|784 |nvvsvc.exe                      |                                      |               |0     |Normal      |5      |                                                          |
+|824 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |9      |                                                          |
+|900 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |16     |                                                          |
+|960 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |18     |                                                          |
+|992 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |18     |                                                          |
+|1016|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |27     |                                                          |
+|1080|ZhuDongFangYu.exe               |                                      |               |0     |Normal      |11     |                                                          |
+|1116|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |15     |                                                          |
+|1144|QQEIMPlatform.exe               |                                      |               |0     |Normal      |4      |                                                          |
+|1236|nvxdsync.exe                    |                                      |               |0     |Normal      |7      |                                                          |
+|1248|nvvsvc.exe                      |                                      |               |0     |Normal      |5      |                                                          |
+|1328|iocptest.exe                    |                                      |               |0     |Normal      |8      |D:\gs_d\fy\src\3.0\IocpClass\IocpTest                     |
+|1396|spoolsv.exe                     |                                      |               |0     |Normal      |12     |                                                          |
+|1444|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |17     |                                                          |
+|1604|vmnat.exe                       |VMware NAT Service                    |10.0.0.40273   |0     |Normal      |6      |                                                          |
+|1612|armsvc.exe                      |                                      |               |0     |Normal      |4      |                                                          |
+|1676|FCUpdateService.exe             |                                      |               |0     |Normal      |4      |                                                          |
+|1720|kagent.exe                      |                                      |               |0     |Normal      |14     |                                                          |
+|1752|kbqsvc.exe                      |                                      |               |0     |Normal      |19     |                                                          |
+|1824|sqlservr.exe                    |                                      |               |0     |Normal      |38     |                                                          |
+|1884|msmdsrv.exe                     |                                      |               |0     |Normal      |17     |                                                          |
+|1912|vmnetdhcp.exe                   |VMware VMnet DHCP service             |10.0.0.40273   |0     |Normal      |3      |                                                          |
+|2016|vmware-authd.exe                |                                      |               |0     |Normal      |7      |                                                          |
+|2116|vmware-usbarbitrator64.exe      |                                      |               |0     |Normal      |5      |                                                          |
+|2232|WmiPrvSE.exe                    |WMI Provider Host                     |6.1.7601.17514 |0     |Normal      |8      |                                                          |
+|2300|wb.exe                          |                                      |               |0     |Normal      |1      |D:\clq\wb1                                                |
+|2308|taskhost.exe                    |                                      |               |0     |Normal      |11     |                                                          |
+|2380|delphi32.exe                    |Delphi-32 Development Environment     |7.0.4.453      |0     |Normal      |4      |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|2428|FlashPlayerPlugin_17_0_0_134.exe|Adobe Flash Player 17.0 r0            |17.0.0.134     |0     |Normal      |11     |C:\Windows\SysWOW64\Macromed\Flash                        |
+|2432|dwm.exe                         |                                      |               |0     |Normal      |3      |                                                          |
+|2476|explorer.exe                    |Windows 资源管理器                    |6.1.7601.17514 |0     |Normal      |24     |                                                          |
+|2568|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |10     |                                                          |
+|2716|vmware-hostd.exe                |                                      |               |0     |Normal      |12     |                                                          |
+|2804|RAVCpl64.exe                    |                                      |               |0     |Normal      |11     |                                                          |
+|2880|taskmgr.exe                     |Windows 任务管理器                    |6.1.7601.17514 |0     |High        |6      |                                                          |
+|3012|audiodg.exe                     |                                      |               |0     |Normal      |10     |                                                          |
+|3040|vmware-tray.exe                 |VMware Tray Process                   |10.0.0.40273   |0     |Normal      |3      |C:\Program Files (x86)\VMware\VMware Workstation          |
+|3056|plugin-container.exe            |Plugin Container for Firefox          |37.0.1.5570    |0     |Normal      |10     |D:\Program Files (x86)_win7\Mozilla Firefox               |
+|3112|tencentdl.exe                   |腾讯高速下载引擎                      |1.0.131.2      |0     |Normal      |38     |C:\program files (x86)\common files\tencent\qqdownload\131|
+|3180|wmpnetwk.exe                    |                                      |               |0     |Normal      |9      |                                                          |
+|3284|QQEIM.exe                       |企业QQ                                |1.89.2036.201  |0     |Normal      |28     |D:\Program Files (x86)_win7\Tencent\QQEIM\Bin             |
+|3396|TXPlatform.exe                  |腾讯QQ多客户端管理服务                |7.0.14275.0    |0     |Normal      |4      |d:\Program Files (x86)_win7\Tencent\QQ\Bin                |
+|3552|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |14     |                                                          |
+|4112|SearchFilterHost.exe            |Microsoft Windows Search Filter Host  |7.0.7600.16385 |0     |Low         |5      |                                                          |
+|4780|SearchProtocolHost.exe          |Microsoft Windows Search Protocol Host|7.0.7600.16385 |0     |Low         |8      |                                                          |
+|4824|FlashPlayerPlugin_17_0_0_134.exe|Adobe Flash Player 17.0 r0            |17.0.0.134     |0     |Normal      |16     |C:\Windows\SysWOW64\Macromed\Flash                        |
+|4884|firefox.exe                     |Firefox                               |37.0.1.5570    |0     |Normal      |54     |D:\Program Files (x86)_win7\Mozilla Firefox               |
+|5064|winhlp32.exe                    |Microsoft? Help                       |50.1.7600.16386|0     |Normal      |2      |C:\Windows                                                |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+---------------------------------------------------
+77A712DA  xor     eax, eax
+77A712DC  mov     [ecx+$04], eax
+77A712DF  dec     eax
+77A712E0  mov     [ecx+$08], eax
+77A712E3  dec     eax
+77A712E4  mov     edx, [esp+$00C8]
+77A712EB  dec     eax
+77A712EC  mov     [ecx+$10], edx
+77A712EF  mov     [ecx+$18], eax
+77A712F2  call    -$00037D97
+77A712F7  mov     eax, [esp+$00C0]  ; <-- EXCEPTION
+77A712FE  dec     eax
+77A712FF  add     esp, $000000C8    ; ''...
+77A71305  ret
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 0052EF14
+EBX: 0052EF14   ESI: 00000110
+ECX: 00000000   ESP: 0018FE84
+EDX: 00000000   EIP: 77C1F9D2
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0018FE84: 77C1F9D2   77A712F7: 8B 84 24 C0 00 00 00 48 81 C4 C8 00 00 00 C3 90  ..$....H........
+0018FE88: 777BC455   77A71307: 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90  ................
+0018FE8C: 00000110   77A71317: 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90  ................
+0018FE90: 00000110   77A71327: 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90  ................
+0018FE94: 0018FEA4   77A71337: 90 90 90 90 90 90 90 90 90 4C 8B D1 B8 00 00 00  .........L......
+0018FE98: 75E81438   77A71347: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 01 00 00  ......D..L......
+0018FE9C: 00000110   77A71357: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 02 00 00  ......D..L......
+0018FEA0: 00527CA8   77A71367: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 03 00 00  ......D..L......
+0018FEA4: 0018FEB0   77A71377: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 04 00 00  ......D..L......
+0018FEA8: 004A9BB4   77A71387: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 05 00 00  ......D..L......
+0018FEAC: 00000110   77A71397: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 06 00 00  ......D..L......
+0018FEB0: 0018FEC8   77A713A7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 07 00 00  ......D..L......
+0018FEB4: 004AB201   77A713B7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 08 00 00  ......D..L......
+0018FEB8: 0052EF14   77A713C7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 09 00 00  ......D..L......
+0018FEBC: 00527CA8   77A713D7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 0A 00 00  ......D..L......
+0018FEC0: 0052BEB0   77A713E7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 0B 00 00  ......D..L......
+
+
+
+EurekaLog 6.0.24
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 14 Apr 2015 10:28:22 +0800
+  1.2 Name/Description: iocptest.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Tue, 14 Apr 2015 10:28:22 +0800
+  1.6 Up Time         : 2 minutes, 10 seconds
+
+Exception:
+--------------------------------------------------------------------------------------------------------------
+  2.1 Date          : Tue, 14 Apr 2015 10:30:33 +0800
+  2.2 Address       : 00404A40
+  2.3 Module Name   : iocptest.exe
+  2.4 Module Version: 
+  2.5 Type          : EAccessViolation
+  2.6 Message       : Access violation at address 00404A40 in module 'iocptest.exe'. Read of address 0278FFFC.
+  2.7 ID            : 90CF
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : Administrator
+  3.2 Name      : 
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeIncreaseQuotaPrivilege        - OFF
+                  SeTcbPrivilege                  - OFF
+                  SeSecurityPrivilege             - OFF
+                  SeTakeOwnershipPrivilege        - OFF
+                  SeLoadDriverPrivilege           - OFF
+                  SeSystemProfilePrivilege        - OFF
+                  SeSystemtimePrivilege           - OFF
+                  SeProfileSingleProcessPrivilege - OFF
+                  SeIncreaseBasePriorityPrivilege - OFF
+                  SeCreatePagefilePrivilege       - OFF
+                  SeBackupPrivilege               - OFF
+                  SeRestorePrivilege              - OFF
+                  SeShutdownPrivilege             - OFF
+                  SeDebugPrivilege                - OFF
+                  SeSystemEnvironmentPrivilege    - OFF
+                  SeChangeNotifyPrivilege         - ON
+                  SeRemoteShutdownPrivilege       - OFF
+                  SeUndockPrivilege               - OFF
+                  SeManageVolumePrivilege         - OFF
+                  SeImpersonatePrivilege          - ON
+                  SeCreateGlobalPrivilege         - ON
+                  SeIncreaseWorkingSetPrivilege   - OFF
+                  SeTimeZonePrivilege             - OFF
+                  SeCreateSymbolicLinkPrivilege   - OFF
+
+Active Controls:
+----------------------------------
+  4.1 Form Class   : Shell_TrayWnd
+  4.2 Form Text    : 
+  4.3 Control Class: 
+  4.4 Control Text : 
+
+Computer:
+-----------------------------------------------------------------------------------------------
+  5.1 Name          : 9LKL99GDDECFPQZ
+  5.2 Total Memory  : 4063 Mb
+  5.3 Free Memory   : 2369 Mb
+  5.4 Total Disk    : 139.01 Gb
+  5.5 Free Disk     : 34.46 Gb
+  5.6 System Up Time: 2 hours, 49 seconds
+  5.7 Processor     : AMD Athlon(tm) 64 X2 Dual Core Processor 4200+
+  5.8 Display Mode  : 1366 x 768, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : NVIDIA GeForce 7025 / NVIDIA nForce 630a (driver 8.17.13.142 - RAM 32 MB)
+  5.11 Printer      : Microsoft XPS Document Writer (driver 6.1.7601.17514)
+
+Operating System:
+--------------------------------------------
+  6.1 Type    : Microsoft Windows 7 (64 bit)
+  6.2 Build # : 7601
+  6.3 Update  : Service Pack 1
+  6.4 Language: Chinese (Simplified)
+  6.5 Charset : 134
+
+Network:
+---------------------------------------------------------------------
+  7.1 IP Address: 192.168.001.233 - 192.168.011.001 - 192.168.220.001
+  7.2 Submask   : 255.255.255.000 - 255.255.255.000 - 255.255.255.000
+  7.3 Gateway   : 192.168.001.010 - 000.000.000.000 - 000.000.000.000
+  7.4 DNS 1     : 114.114.114.114 - 000.000.000.000 - 000.000.000.000
+  7.5 DNS 2     : 000.000.000.000 - 000.000.000.000 - 000.000.000.000
+  7.6 DHCP      : OFF             - OFF             - OFF            
+
+Call Stack Information:
+--------------------------------------------------------------------------------------------------------------------
+|Address |Module        |Unit                  |Class              |Procedure/Method                      |Line    |
+--------------------------------------------------------------------------------------------------------------------
+|Running Thread: ID=1528; Priority=0; Class=TAcceptFastThread                                                      |
+|------------------------------------------------------------------------------------------------------------------|
+|004A9C4F|iocptest.exe  |uThreadLock.pas       |TThreadLock        |Lock                                  |160[25] |
+|004A9BF0|iocptest.exe  |uThreadLock.pas       |TThreadLock        |Lock                                  |135[0]  |
+|004AC402|iocptest.exe  |iocpInterfaceClass.pas|TAcceptFastThread  |Execute                               |1337[18]|
+|------------------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                                          |
+|------------------------------------------------------------------------------------------------------------------|
+|004AB06A|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |305[54] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                               |1117[3] |
+|------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                  |
+|Running Thread: ID=1480; Priority=0; Class=; [Main]                                                               |
+|------------------------------------------------------------------------------------------------------------------|
+|77C1F89C|ntdll.dll     |                      |                   |NtWaitForSingleObject                 |        |
+|77C221E1|ntdll.dll     |                      |                   |RtlActivateActivationContextUnsafeFast|        |
+|77C222A0|ntdll.dll     |                      |                   |RtlEnterCriticalSection               |        |
+|77C1012E|ntdll.dll     |                      |                   |KiUserExceptionDispatcher             |        |
+|777BC44F|KERNELBASE.dll|                      |                   |CloseHandle                           |        |
+|777BC428|KERNELBASE.dll|                      |                   |CloseHandle                           |        |
+|004A9BAF|iocptest.exe  |uThreadLock.pas       |TThreadLock        |TerminateInThread                     |82[2]   |
+|004A9BA8|iocptest.exe  |uThreadLock.pas       |TThreadLock        |TerminateInThread                     |80[0]   |
+|004AB1FC|iocptest.exe  |iocpInterfaceClass.pas|TIocpClass         |Destroy                               |395[18] |
+|004AD268|iocptest.exe  |iocptest.dpr          |                   |                                      |23[4]   |
+|------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                  |
+|Running Thread: ID=4024; Priority=0; Class=TAcceptThread                                                          |
+|------------------------------------------------------------------------------------------------------------------|
+|75D02F7B|ws2_32.dll    |                      |                   |WahReferenceContextByHandle           |        |
+|75D068D6|ws2_32.dll    |                      |                   |WSAAccept                             |        |
+|004AB0FC|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |334[83] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                               |1117[3] |
+|------------------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=1480; Priority=0; Class=; [Main]                                                               |
+|------------------------------------------------------------------------------------------------------------------|
+|004AC291|iocptest.exe  |iocpInterfaceClass.pas|TIocpClass         |StartService                          |1226[22]|
+|004AC1D0|iocptest.exe  |iocpInterfaceClass.pas|TIocpClass         |StartService                          |1204[0] |
+|004ACA94|iocptest.exe  |IocpTestMain.pas      |TForm1             |btnStartClick                         |75[13]  |
+|77C2DFA5|ntdll.dll     |                      |                   |RtlFreeHeap                           |        |
+|77C2E6A3|ntdll.dll     |                      |                   |RtlDeleteBoundaryDescriptor           |        |
+|75C2792F|user32.dll    |                      |                   |CallWindowProcA                       |        |
+|75C196C0|user32.dll    |                      |                   |SendMessageW                          |        |
+|75C19679|user32.dll    |                      |                   |SendMessageW                          |        |
+|77C52830|ntdll.dll     |                      |                   |RtlFillMemoryUlong                    |        |
+|75C27945|user32.dll    |                      |                   |CallWindowProcA                       |        |
+|75C2792F|user32.dll    |                      |                   |CallWindowProcA                       |        |
+|77C22260|ntdll.dll     |                      |                   |RtlLeaveCriticalSection               |        |
+|75C22ABC|user32.dll    |                      |                   |GetCapture                            |        |
+|75C22AAC|user32.dll    |                      |                   |GetCapture                            |        |
+|75C17BC5|user32.dll    |                      |                   |DispatchMessageA                      |        |
+|75C17BBB|user32.dll    |                      |                   |DispatchMessageA                      |        |
+|004AD263|iocptest.exe  |iocptest.dpr          |                   |                                      |22[3]   |
+|------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                  |
+|Running Thread: ID=1004; Priority=0; Class=TServerWorkerThread                                                    |
+|------------------------------------------------------------------------------------------------------------------|
+|777B76F7|KERNELBASE.dll|                      |                   |GetQueuedCompletionStatus             |        |
+|004ABADC|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                                   |856[24] |
+|004ABA6C|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                                   |832[0]  |
+|004ABF7B|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Execute                               |1104[2] |
+|------------------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                                          |
+|------------------------------------------------------------------------------------------------------------------|
+|004AAFF3|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |289[38] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                               |1117[3] |
+|------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                  |
+|Running Thread: ID=4072; Priority=0; Class=TServerWorkerThread                                                    |
+|------------------------------------------------------------------------------------------------------------------|
+|777B76F7|KERNELBASE.dll|                      |                   |GetQueuedCompletionStatus             |        |
+|777BEF19|KERNELBASE.dll|                      |                   |VirtualQueryEx                        |        |
+|004ABADC|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                                   |856[24] |
+|004ABA6C|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                                   |832[0]  |
+|004ABF7B|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Execute                               |1104[2] |
+|------------------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                                          |
+|------------------------------------------------------------------------------------------------------------------|
+|004AAFF3|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |289[38] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                               |1117[3] |
+|------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                  |
+|Running Thread: ID=1916; Priority=0; Class=TServerWorkerThread                                                    |
+|------------------------------------------------------------------------------------------------------------------|
+|777B76F7|KERNELBASE.dll|                      |                   |GetQueuedCompletionStatus             |        |
+|004ABADC|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                                   |856[24] |
+|004ABA6C|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                                   |832[0]  |
+|004ABF7B|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Execute                               |1104[2] |
+|------------------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                                          |
+|------------------------------------------------------------------------------------------------------------------|
+|004AAFF3|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |289[38] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                               |1117[3] |
+|------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                  |
+|Running Thread: ID=4288; Priority=0; Class=TServerWorkerThread                                                    |
+|------------------------------------------------------------------------------------------------------------------|
+|777B76F7|KERNELBASE.dll|                      |                   |GetQueuedCompletionStatus             |        |
+|004ABADC|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                                   |856[24] |
+|004ABA6C|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Run                                   |832[0]  |
+|004ABF7B|iocptest.exe  |iocpInterfaceClass.pas|TServerWorkerThread|Execute                               |1104[2] |
+|------------------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=4024; Priority=0; Class=TAcceptThread                                                          |
+|------------------------------------------------------------------------------------------------------------------|
+|004AAFF3|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |289[38] |
+|004AAF10|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |CreateServer                          |251[0]  |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread      |Execute                               |1117[3] |
+--------------------------------------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name          |Description                                     |Version         |Size    |Modified           |Path                                                                                                          |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|iocptest.exe  |                                                |                |827904  |2015-04-14 10:28:24|D:\gs_d\fy\src\3.0\IocpClass\IocpTest                                                                         |
+|71BF0000|wsock32.dll   |Windows Socket 32-Bit DLL                       |6.1.7600.16385  |15360   |2009-07-14 09:16:22|C:\Windows\system32                                                                                           |
+|729F0000|wshtcpip.dll  |Winsock2 帮助程序 DLL (TL/IPv4)                 |6.1.7600.16385  |9216    |2009-07-14 09:16:22|C:\Windows\System32                                                                                           |
+|73650000|comctl32.dll  |公用控件库                                      |5.82.7601.17514 |530432  |2010-11-21 11:24:10|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af|
+|74020000|DNSAPI.dll    |DNS 客户端 API DLL                              |6.1.7601.17570  |270336  |2011-03-03 13:38:02|C:\Windows\system32                                                                                           |
+|74070000|mswsock.dll   |Microsoft Windows Sockets 2.0 服务提供程序      |6.1.7601.17514  |232448  |2010-11-21 11:24:10|C:\Windows\system32                                                                                           |
+|740B0000|dhcpcsvc.DLL  |DHCP 客户端服务                                 |6.1.7600.16385  |61952   |2009-07-14 09:15:12|C:\Windows\system32                                                                                           |
+|740D0000|dhcpcsvc6.DLL |DHCPv6 客户端                                   |6.1.7600.16385  |43008   |2009-07-14 09:15:12|C:\Windows\system32                                                                                           |
+|75500000|WINNSI.DLL    |Network Store Information RPC interface         |6.1.7600.16385  |16896   |2009-07-14 09:16:20|C:\Windows\system32                                                                                           |
+|75520000|iphlpapi.dll  |IP Helper API                                   |6.1.7601.17514  |103936  |2010-11-21 11:24:34|C:\Windows\system32                                                                                           |
+|75550000|version.dll   |Version Checking and File Installation Libraries|6.1.7600.16385  |21504   |2009-07-14 09:16:18|C:\Windows\system32                                                                                           |
+|75650000|CRYPTBASE.dll |Base cryptographic API DLL                      |6.1.7600.16385  |36864   |2009-07-14 09:15:08|C:\Windows\syswow64                                                                                           |
+|75660000|SspiCli.dll   |Security Support Provider Interface             |6.1.7601.17856  |96768   |2012-06-02 12:34:10|C:\Windows\syswow64                                                                                           |
+|75780000|sechost.dll   |Host for SCM/SDDL/LSA Lookup APIs               |6.1.7600.16385  |92160   |2009-07-14 09:16:14|C:\Windows\SysWOW64                                                                                           |
+|759A0000|oleaut32.dll  |                                                |6.1.7601.17676  |571904  |2011-08-27 12:26:28|C:\Windows\syswow64                                                                                           |
+|75A30000|IMM32.DLL     |Multi-User Windows IMM32 API Client DLL         |6.1.7601.17514  |119808  |2010-11-21 11:24:26|C:\Windows\system32                                                                                           |
+|75BF0000|NSI.dll       |NSI User-mode interface DLL                     |6.1.7600.16385  |8704    |2009-07-14 09:16:12|C:\Windows\syswow64                                                                                           |
+|75C00000|user32.dll    |多用户 Windows 用户 API 客户端 DLL              |6.1.7601.17514  |833024  |2010-11-21 11:24:22|C:\Windows\syswow64                                                                                           |
+|75D00000|ws2_32.dll    |Windows Socket 2.0 32 位 DLL                    |6.1.7601.17514  |206848  |2010-11-21 11:23:56|C:\Windows\syswow64                                                                                           |
+|75DC0000|LPK.dll       |Language Pack                                   |6.1.7600.16385  |25600   |2009-07-14 09:11:24|C:\Windows\syswow64                                                                                           |
+|75E70000|kernel32.dll  |Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |1114112 |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|75F80000|RPCRT4.dll    |远程过程调用运行时                              |6.1.7601.17514  |663040  |2010-11-21 11:24:12|C:\Windows\syswow64                                                                                           |
+|76090000|PSAPI.DLL     |Process Status Helper                           |6.1.7600.16385  |6144    |2009-07-14 09:16:14|C:\Windows\syswow64                                                                                           |
+|760B0000|ADVAPI32.dll  |高级 Windows 32 基本 API                        |6.1.7601.17514  |640512  |2010-11-21 11:24:30|C:\Windows\syswow64                                                                                           |
+|76640000|msvcrt.dll    |Windows NT CRT DLL                              |7.0.7601.17744  |690688  |2011-12-16 15:53:00|C:\Windows\syswow64                                                                                           |
+|76750000|ole32.dll     |用于 Windows 的 Microsoft OLE                   |6.1.7601.17514  |1414144 |2010-11-21 11:24:02|C:\Windows\syswow64                                                                                           |
+|76900000|USP10.dll     |Uniscribe Unicode script processor              |1.626.7601.17514|626176  |2010-11-21 11:24:18|C:\Windows\syswow64                                                                                           |
+|769A0000|shell32.dll   |Windows 外壳公用 DLL                            |6.1.7601.17859  |12873728|2012-06-09 12:41:02|C:\Windows\syswow64                                                                                           |
+|775F0000|SHLWAPI.dll   |外壳简易实用工具库                              |6.1.7601.17514  |350208  |2010-11-21 11:23:50|C:\Windows\syswow64                                                                                           |
+|77650000|GDI32.dll     |GDI Client DLL                                  |6.1.7601.17514  |311296  |2010-11-21 11:24:16|C:\Windows\syswow64                                                                                           |
+|776E0000|MSCTF.dll     |MSCTF 服务器 DLL                                |6.1.7600.16385  |828928  |2009-07-14 09:15:44|C:\Windows\syswow64                                                                                           |
+|777B0000|KERNELBASE.dll|Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |274944  |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|77C00000|ntdll.dll     |NT 层 DLL                                       |6.1.7601.17725  |1292080 |2011-11-17 13:38:40|C:\Windows\SysWOW64                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                            |Description                           |Version        |Memory|Priority    |Threads|Path                                                      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|0   |[System Process]                |                                      |               |0     |            |2      |                                                          |
+|4   |System                          |                                      |               |0     |Normal      |95     |                                                          |
+|248 |smss.exe                        |                                      |               |0     |Above-Normal|2      |                                                          |
+|368 |SearchIndexer.exe               |Microsoft Windows Search 索引器       |7.0.7600.16385 |0     |Normal      |12     |                                                          |
+|384 |csrss.exe                       |                                      |               |0     |High        |9      |                                                          |
+|424 |wininit.exe                     |Windows 启动应用程序                  |6.1.7600.16385 |0     |High        |3      |                                                          |
+|452 |csrss.exe                       |                                      |               |0     |High        |10     |                                                          |
+|492 |services.exe                    |                                      |               |0     |Normal      |7      |                                                          |
+|516 |winlogon.exe                    |                                      |               |0     |High        |3      |                                                          |
+|552 |lsass.exe                       |                                      |               |0     |Normal      |8      |                                                          |
+|564 |lsm.exe                         |                                      |               |0     |Normal      |10     |                                                          |
+|668 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |10     |                                                          |
+|740 |delphi32.exe                    |Delphi-32 Development Environment     |7.0.4.453      |0     |Normal      |13     |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|784 |nvvsvc.exe                      |                                      |               |0     |Normal      |5      |                                                          |
+|824 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |8      |                                                          |
+|900 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |17     |                                                          |
+|960 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |20     |                                                          |
+|992 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |18     |                                                          |
+|1016|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |28     |                                                          |
+|1080|ZhuDongFangYu.exe               |                                      |               |0     |Normal      |11     |                                                          |
+|1116|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |15     |                                                          |
+|1144|QQEIMPlatform.exe               |                                      |               |0     |Normal      |4      |                                                          |
+|1236|nvxdsync.exe                    |                                      |               |0     |Normal      |7      |                                                          |
+|1248|nvvsvc.exe                      |                                      |               |0     |Normal      |5      |                                                          |
+|1328|iocptest.exe                    |                                      |               |0     |Normal      |12     |D:\gs_d\fy\src\3.0\IocpClass\IocpTest                     |
+|1396|spoolsv.exe                     |                                      |               |0     |Normal      |13     |                                                          |
+|1444|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |19     |                                                          |
+|1604|vmnat.exe                       |VMware NAT Service                    |10.0.0.40273   |0     |Normal      |6      |                                                          |
+|1612|armsvc.exe                      |                                      |               |0     |Normal      |4      |                                                          |
+|1676|FCUpdateService.exe             |                                      |               |0     |Normal      |4      |                                                          |
+|1720|kagent.exe                      |                                      |               |0     |Normal      |16     |                                                          |
+|1752|kbqsvc.exe                      |                                      |               |0     |Normal      |20     |                                                          |
+|1824|sqlservr.exe                    |                                      |               |0     |Normal      |38     |                                                          |
+|1884|msmdsrv.exe                     |                                      |               |0     |Normal      |17     |                                                          |
+|1912|vmnetdhcp.exe                   |VMware VMnet DHCP service             |10.0.0.40273   |0     |Normal      |3      |                                                          |
+|2016|vmware-authd.exe                |                                      |               |0     |Normal      |7      |                                                          |
+|2116|vmware-usbarbitrator64.exe      |                                      |               |0     |Normal      |5      |                                                          |
+|2232|WmiPrvSE.exe                    |WMI Provider Host                     |6.1.7601.17514 |0     |Normal      |8      |                                                          |
+|2300|wb.exe                          |                                      |               |0     |Normal      |1      |D:\clq\wb1                                                |
+|2308|taskhost.exe                    |                                      |               |0     |Normal      |11     |                                                          |
+|2380|delphi32.exe                    |Delphi-32 Development Environment     |7.0.4.453      |0     |Normal      |4      |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|2428|FlashPlayerPlugin_17_0_0_134.exe|Adobe Flash Player 17.0 r0            |17.0.0.134     |0     |Normal      |11     |C:\Windows\SysWOW64\Macromed\Flash                        |
+|2432|dwm.exe                         |                                      |               |0     |Normal      |3      |                                                          |
+|2476|explorer.exe                    |Windows 资源管理器                    |6.1.7601.17514 |0     |Normal      |24     |                                                          |
+|2568|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |10     |                                                          |
+|2716|vmware-hostd.exe                |                                      |               |0     |Normal      |12     |                                                          |
+|2804|RAVCpl64.exe                    |                                      |               |0     |Normal      |11     |                                                          |
+|2880|taskmgr.exe                     |Windows 任务管理器                    |6.1.7601.17514 |0     |High        |4      |                                                          |
+|3012|audiodg.exe                     |                                      |               |0     |Normal      |11     |                                                          |
+|3040|vmware-tray.exe                 |VMware Tray Process                   |10.0.0.40273   |0     |Normal      |3      |C:\Program Files (x86)\VMware\VMware Workstation          |
+|3056|plugin-container.exe            |Plugin Container for Firefox          |37.0.1.5570    |0     |Normal      |10     |D:\Program Files (x86)_win7\Mozilla Firefox               |
+|3112|tencentdl.exe                   |腾讯高速下载引擎                      |1.0.131.2      |0     |Normal      |38     |C:\program files (x86)\common files\tencent\qqdownload\131|
+|3180|wmpnetwk.exe                    |                                      |               |0     |Normal      |9      |                                                          |
+|3284|QQEIM.exe                       |企业QQ                                |1.89.2036.201  |0     |Normal      |29     |D:\Program Files (x86)_win7\Tencent\QQEIM\Bin             |
+|3396|TXPlatform.exe                  |腾讯QQ多客户端管理服务                |7.0.14275.0    |0     |Normal      |4      |d:\Program Files (x86)_win7\Tencent\QQ\Bin                |
+|3552|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |13     |                                                          |
+|4112|SearchFilterHost.exe            |Microsoft Windows Search Filter Host  |7.0.7600.16385 |0     |Low         |4      |                                                          |
+|4780|SearchProtocolHost.exe          |Microsoft Windows Search Protocol Host|7.0.7600.16385 |0     |Low         |8      |                                                          |
+|4824|FlashPlayerPlugin_17_0_0_134.exe|Adobe Flash Player 17.0 r0            |17.0.0.134     |0     |Normal      |16     |C:\Windows\SysWOW64\Macromed\Flash                        |
+|4884|firefox.exe                     |Firefox                               |37.0.1.5570    |0     |Normal      |52     |D:\Program Files (x86)_win7\Mozilla Firefox               |
+|5064|winhlp32.exe                    |Microsoft? Help                       |50.1.7600.16386|0     |Normal      |2      |C:\Windows                                                |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+--------------------------------------------------------
+; System._LStrCat (Line=0 - Offset=0)
+; -----------------------------------
+00404A2A  jz      System._LStrCat
+00404A2C  mov     ecx, [eax]
+00404A2E  test    ecx, ecx
+00404A30  jz      System._LStrAsg
+00404A36  push    ebx
+00404A37  push    esi
+00404A38  push    edi
+00404A39  mov     ebx, eax
+00404A3B  mov     esi, edx
+00404A3D  mov     edi, [ecx-$04]
+00404A40  mov     edx, [esi-$04]         ; <-- EXCEPTION
+00404A43  add     edx, edi
+00404A45  cmp     esi, ecx
+00404A47  jz      System._LStrCat
+00404A49  call    System._LStrSetLength
+00404A4E  mov     eax, esi
+00404A50  mov     ecx, [esi-$04]
+00404A53  mov     edx, [ebx]
+00404A55  add     edx, edi
+00404A57  call    System.Move
+00404A5C  pop     edi
+
+Registers:
+-----------------------------
+EAX: 03B8FE7C   EDI: 00000011
+EBX: 03B8FE7C   ESI: 02790000
+ECX: 03BDB05C   ESP: 03B8FE50
+EDX: 02790000   EIP: 00404A40
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+03B8FE50: 004AC6CC   00404A40: 8B 56 FC 01 FA 39 CE 74 17 E8 5E 03 00 00 89 F0  .V...9.t..^.....
+03B8FE54: FFFFFFFF   00404A50: 8B 4E FC 8B 13 01 FA E8 EC DF FF FF 5F 5E 5B C3  .N.........._^[.
+03B8FE58: 0052F25C   00404A60: E8 47 03 00 00 8B 03 89 F9 EB E8 C3 85 D2 74 61  .G............ta
+03B8FE5C: 004A9C54   00404A70: 85 C9 0F 84 20 FD FF FF 3B 10 74 5C 3B 08 74 0E  .... ...;.t\;.t.
+03B8FE60: 03B8FE90   00404A80: 50 51 E8 11 FD FF FF 5A 58 E9 9A FF FF FF 53 56  PQ.....ZX.....SV
+03B8FE64: 00404010   00404A90: 57 89 D3 89 CE 50 8B 43 FC 03 46 FC E8 67 FD FF  W....P.C..F..g..
+03B8FE68: 03B8FE88   00404AA0: FF 89 C7 89 C2 89 D8 8B 4B FC E8 99 DF FF FF 89  ........K.......
+03B8FE6C: 03B8FF40   00404AB0: FA 89 F0 8B 4E FC 03 53 FC E8 8A DF FF FF 58 89  ....N..S......X.
+03B8FE70: 034DB75D   00404AC0: FA 85 FF 74 03 FF 4F F8 E8 CB FC FF FF 5F 5E 5B  ...t..O......_^[
+03B8FE74: 00000006   00404AD0: C3 89 CA E9 C0 FC FF FF 89 CA E9 49 FF FF FF C3  ...........I....
+03B8FE78: 00000000   00404AE0: 53 56 57 52 50 89 D3 31 FF 8B 4C 94 14 85 C9 74  SVWRP..1..L....t
+03B8FE7C: 00000000   00404AF0: 0C 39 08 75 08 89 CF 8B 41 FC 4A EB 02 31 C0 8B  .9.u....A.J..1..
+03B8FE80: 00000000   00404B00: 4C 94 14 85 C9 74 09 03 41 FC 39 CF 75 02 31 FF  L....t..A.9.u.1.
+03B8FE84: 00000000   00404B10: 4A 75 EC 85 FF 74 17 89 C2 8B 04 24 8B 77 FC E8  Ju...t.....$.w..
+03B8FE88: 03B8FEEC   00404B20: 88 02 00 00 8B 3C 24 FF 37 03 37 4B EB 08 E8 D5  .....<$.7.7K....
+03B8FE8C: 004AC407   00404B30: FC FF FF 50 89 C6 8B 44 9C 18 89 F2 85 C0 74 0A  ...P...D......t.
+
+
+
+EurekaLog 6.0.24
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 14 Apr 2015 10:28:22 +0800
+  1.2 Name/Description: iocptest.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Tue, 14 Apr 2015 10:28:22 +0800
+  1.6 Up Time         : 3 minutes, 0 second
+
+Exception:
+--------------------------------------------------------------
+  2.1 Date          : Tue, 14 Apr 2015 10:31:23 +0800
+  2.2 Address       : 
+  2.3 Module Name   : iocptest.exe
+  2.4 Module Version: 
+  2.5 Type          : EMemoryLeak
+  2.6 Message       : Memory Leak: Total size=1594 - Count=11.
+  2.7 ID            : 8027
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : Administrator
+  3.2 Name      : 
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeIncreaseQuotaPrivilege        - OFF
+                  SeTcbPrivilege                  - OFF
+                  SeSecurityPrivilege             - OFF
+                  SeTakeOwnershipPrivilege        - OFF
+                  SeLoadDriverPrivilege           - OFF
+                  SeSystemProfilePrivilege        - OFF
+                  SeSystemtimePrivilege           - OFF
+                  SeProfileSingleProcessPrivilege - OFF
+                  SeIncreaseBasePriorityPrivilege - OFF
+                  SeCreatePagefilePrivilege       - OFF
+                  SeBackupPrivilege               - OFF
+                  SeRestorePrivilege              - OFF
+                  SeShutdownPrivilege             - OFF
+                  SeDebugPrivilege                - OFF
+                  SeSystemEnvironmentPrivilege    - OFF
+                  SeChangeNotifyPrivilege         - ON
+                  SeRemoteShutdownPrivilege       - OFF
+                  SeUndockPrivilege               - OFF
+                  SeManageVolumePrivilege         - OFF
+                  SeImpersonatePrivilege          - ON
+                  SeCreateGlobalPrivilege         - ON
+                  SeIncreaseWorkingSetPrivilege   - OFF
+                  SeTimeZonePrivilege             - OFF
+                  SeCreateSymbolicLinkPrivilege   - OFF
+
+Active Controls:
+--------------------------------------------------------------------------------
+  4.1 Form Class   : TEditWindow
+  4.2 Form Text    : d:\Program Files (x86)\EurekaLog 6\Delphi7\ExceptionLog.pas
+  4.3 Control Class: 
+  4.4 Control Text : 
+
+Computer:
+-----------------------------------------------------------------------------------------------
+  5.1 Name          : 9LKL99GDDECFPQZ
+  5.2 Total Memory  : 4063 Mb
+  5.3 Free Memory   : 2363 Mb
+  5.4 Total Disk    : 139.01 Gb
+  5.5 Free Disk     : 34.46 Gb
+  5.6 System Up Time: 2 hours, 1 minute, 40 seconds
+  5.7 Processor     : AMD Athlon(tm) 64 X2 Dual Core Processor 4200+
+  5.8 Display Mode  : 1366 x 768, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : NVIDIA GeForce 7025 / NVIDIA nForce 630a (driver 8.17.13.142 - RAM 32 MB)
+  5.11 Printer      : Microsoft XPS Document Writer (driver 6.1.7601.17514)
+
+Operating System:
+--------------------------------------------
+  6.1 Type    : Microsoft Windows 7 (64 bit)
+  6.2 Build # : 7601
+  6.3 Update  : Service Pack 1
+  6.4 Language: Chinese (Simplified)
+  6.5 Charset : 134
+
+Network:
+---------------------------------------------------------------------
+  7.1 IP Address: 192.168.001.233 - 192.168.011.001 - 192.168.220.001
+  7.2 Submask   : 255.255.255.000 - 255.255.255.000 - 255.255.255.000
+  7.3 Gateway   : 192.168.001.010 - 000.000.000.000 - 000.000.000.000
+  7.4 DNS 1     : 114.114.114.114 - 000.000.000.000 - 000.000.000.000
+  7.5 DNS 2     : 000.000.000.000 - 000.000.000.000 - 000.000.000.000
+  7.6 DHCP      : OFF             - OFF             - OFF            
+
+Call Stack Information:
+----------------------------------------------------------------------------------------
+|Address |Module        |Unit                  |Class        |Procedure/Method|Line    |
+----------------------------------------------------------------------------------------
+|+Memory Leak: Type=TForm1; Total size=776; Count=1                                    |
+|--------------------------------------------------------------------------------------|
+|004AD257|iocptest.exe  |iocptest.dpr          |             |                |21[2]   |
+|--------------------------------------------------------------------------------------|
+|                                                                                      |
+|+Memory Leak: Type=TIocpClass; Total size=136; Count=1                                |
+|--------------------------------------------------------------------------------------|
+|004ACA45|iocptest.exe  |IocpTestMain.pas      |TForm1       |btnStartClick   |65[3]   |
+|--------------------------------------------------------------------------------------|
+|                                                                                      |
+|+Memory Leak: Type=TAcceptThread; Total size=96; Count=1                              |
+|--------------------------------------------------------------------------------------|
+|004AC266|iocptest.exe  |iocpInterfaceClass.pas|TIocpClass   |StartService    |1218[14]|
+|004ACA94|iocptest.exe  |IocpTestMain.pas      |TForm1       |btnStartClick   |75[13]  |
+|004AAF57|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread|CreateServer    |261[10] |
+|777C0DCE|KERNELBASE.dll|                      |             |SetEvent        |        |
+|--------------------------------------------------------------------------------------|
+|                                                                                      |
+|+Memory Leak: Type=TServerWorkerThread; Total size=400; Count=4                       |
+|--------------------------------------------------------------------------------------|
+|004AAF84|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread|CreateServer    |278[27] |
+|777C0DCE|KERNELBASE.dll|                      |             |SetEvent        |        |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread|Execute         |1117[3] |
+|--------------------------------------------------------------------------------------|
+|                                                                                      |
+|+Memory Leak: Type=TAcceptFastThread; Total size=96; Count=1                          |
+|--------------------------------------------------------------------------------------|
+|004AB009|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread|CreateServer    |295[44] |
+|777C0DCE|KERNELBASE.dll|                      |             |SetEvent        |        |
+|004ABFBB|iocptest.exe  |iocpInterfaceClass.pas|TAcceptThread|Execute         |1117[3] |
+----------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name          |Description                                     |Version         |Size    |Modified           |Path                                                                                                          |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|iocptest.exe  |                                                |                |827904  |2015-04-14 10:28:24|D:\gs_d\fy\src\3.0\IocpClass\IocpTest                                                                         |
+|71BF0000|wsock32.dll   |Windows Socket 32-Bit DLL                       |6.1.7600.16385  |15360   |2009-07-14 09:16:22|C:\Windows\system32                                                                                           |
+|729F0000|wshtcpip.dll  |Winsock2 帮助程序 DLL (TL/IPv4)                 |6.1.7600.16385  |9216    |2009-07-14 09:16:22|C:\Windows\System32                                                                                           |
+|73650000|comctl32.dll  |公用控件库                                      |5.82.7601.17514 |530432  |2010-11-21 11:24:10|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af|
+|74020000|DNSAPI.dll    |DNS 客户端 API DLL                              |6.1.7601.17570  |270336  |2011-03-03 13:38:02|C:\Windows\system32                                                                                           |
+|74070000|mswsock.dll   |Microsoft Windows Sockets 2.0 服务提供程序      |6.1.7601.17514  |232448  |2010-11-21 11:24:10|C:\Windows\system32                                                                                           |
+|740B0000|dhcpcsvc.DLL  |DHCP 客户端服务                                 |6.1.7600.16385  |61952   |2009-07-14 09:15:12|C:\Windows\system32                                                                                           |
+|740D0000|dhcpcsvc6.DLL |DHCPv6 客户端                                   |6.1.7600.16385  |43008   |2009-07-14 09:15:12|C:\Windows\system32                                                                                           |
+|75500000|WINNSI.DLL    |Network Store Information RPC interface         |6.1.7600.16385  |16896   |2009-07-14 09:16:20|C:\Windows\system32                                                                                           |
+|75520000|iphlpapi.dll  |IP Helper API                                   |6.1.7601.17514  |103936  |2010-11-21 11:24:34|C:\Windows\system32                                                                                           |
+|75550000|version.dll   |Version Checking and File Installation Libraries|6.1.7600.16385  |21504   |2009-07-14 09:16:18|C:\Windows\system32                                                                                           |
+|75650000|CRYPTBASE.dll |Base cryptographic API DLL                      |6.1.7600.16385  |36864   |2009-07-14 09:15:08|C:\Windows\syswow64                                                                                           |
+|75660000|SspiCli.dll   |Security Support Provider Interface             |6.1.7601.17856  |96768   |2012-06-02 12:34:10|C:\Windows\syswow64                                                                                           |
+|75780000|sechost.dll   |Host for SCM/SDDL/LSA Lookup APIs               |6.1.7600.16385  |92160   |2009-07-14 09:16:14|C:\Windows\SysWOW64                                                                                           |
+|759A0000|oleaut32.dll  |                                                |6.1.7601.17676  |571904  |2011-08-27 12:26:28|C:\Windows\syswow64                                                                                           |
+|75A30000|IMM32.DLL     |Multi-User Windows IMM32 API Client DLL         |6.1.7601.17514  |119808  |2010-11-21 11:24:26|C:\Windows\system32                                                                                           |
+|75BF0000|NSI.dll       |NSI User-mode interface DLL                     |6.1.7600.16385  |8704    |2009-07-14 09:16:12|C:\Windows\syswow64                                                                                           |
+|75C00000|user32.dll    |多用户 Windows 用户 API 客户端 DLL              |6.1.7601.17514  |833024  |2010-11-21 11:24:22|C:\Windows\syswow64                                                                                           |
+|75D00000|ws2_32.dll    |Windows Socket 2.0 32 位 DLL                    |6.1.7601.17514  |206848  |2010-11-21 11:23:56|C:\Windows\syswow64                                                                                           |
+|75DC0000|LPK.dll       |Language Pack                                   |6.1.7600.16385  |25600   |2009-07-14 09:11:24|C:\Windows\syswow64                                                                                           |
+|75E70000|kernel32.dll  |Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |1114112 |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|75F80000|RPCRT4.dll    |远程过程调用运行时                              |6.1.7601.17514  |663040  |2010-11-21 11:24:12|C:\Windows\syswow64                                                                                           |
+|76090000|PSAPI.DLL     |Process Status Helper                           |6.1.7600.16385  |6144    |2009-07-14 09:16:14|C:\Windows\syswow64                                                                                           |
+|760B0000|ADVAPI32.dll  |高级 Windows 32 基本 API                        |6.1.7601.17514  |640512  |2010-11-21 11:24:30|C:\Windows\syswow64                                                                                           |
+|76640000|msvcrt.dll    |Windows NT CRT DLL                              |7.0.7601.17744  |690688  |2011-12-16 15:53:00|C:\Windows\syswow64                                                                                           |
+|76750000|ole32.dll     |用于 Windows 的 Microsoft OLE                   |6.1.7601.17514  |1414144 |2010-11-21 11:24:02|C:\Windows\syswow64                                                                                           |
+|76900000|USP10.dll     |Uniscribe Unicode script processor              |1.626.7601.17514|626176  |2010-11-21 11:24:18|C:\Windows\syswow64                                                                                           |
+|769A0000|shell32.dll   |Windows 外壳公用 DLL                            |6.1.7601.17859  |12873728|2012-06-09 12:41:02|C:\Windows\syswow64                                                                                           |
+|775F0000|SHLWAPI.dll   |外壳简易实用工具库                              |6.1.7601.17514  |350208  |2010-11-21 11:23:50|C:\Windows\syswow64                                                                                           |
+|77650000|GDI32.dll     |GDI Client DLL                                  |6.1.7601.17514  |311296  |2010-11-21 11:24:16|C:\Windows\syswow64                                                                                           |
+|776E0000|MSCTF.dll     |MSCTF 服务器 DLL                                |6.1.7600.16385  |828928  |2009-07-14 09:15:44|C:\Windows\syswow64                                                                                           |
+|777B0000|KERNELBASE.dll|Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |274944  |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|77C00000|ntdll.dll     |NT 层 DLL                                       |6.1.7601.17725  |1292080 |2011-11-17 13:38:40|C:\Windows\SysWOW64                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                            |Description                           |Version        |Memory|Priority    |Threads|Path                                                      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|0   |[System Process]                |                                      |               |0     |            |2      |                                                          |
+|4   |System                          |                                      |               |0     |Normal      |95     |                                                          |
+|248 |smss.exe                        |                                      |               |0     |Above-Normal|2      |                                                          |
+|368 |SearchIndexer.exe               |Microsoft Windows Search 索引器       |7.0.7600.16385 |0     |Normal      |11     |                                                          |
+|384 |csrss.exe                       |                                      |               |0     |High        |9      |                                                          |
+|424 |wininit.exe                     |Windows 启动应用程序                  |6.1.7600.16385 |0     |High        |3      |                                                          |
+|452 |csrss.exe                       |                                      |               |0     |High        |10     |                                                          |
+|492 |services.exe                    |                                      |               |0     |Normal      |7      |                                                          |
+|516 |winlogon.exe                    |                                      |               |0     |High        |3      |                                                          |
+|552 |lsass.exe                       |                                      |               |0     |Normal      |8      |                                                          |
+|564 |lsm.exe                         |                                      |               |0     |Normal      |10     |                                                          |
+|668 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |10     |                                                          |
+|740 |delphi32.exe                    |Delphi-32 Development Environment     |7.0.4.453      |0     |Normal      |13     |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|784 |nvvsvc.exe                      |                                      |               |0     |Normal      |5      |                                                          |
+|824 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |9      |                                                          |
+|900 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |19     |                                                          |
+|960 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |19     |                                                          |
+|992 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |18     |                                                          |
+|1016|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |30     |                                                          |
+|1080|ZhuDongFangYu.exe               |                                      |               |0     |Normal      |11     |                                                          |
+|1116|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |15     |                                                          |
+|1144|QQEIMPlatform.exe               |                                      |               |0     |Normal      |4      |                                                          |
+|1236|nvxdsync.exe                    |                                      |               |0     |Normal      |7      |                                                          |
+|1248|nvvsvc.exe                      |                                      |               |0     |Normal      |5      |                                                          |
+|1328|iocptest.exe                    |                                      |               |0     |Normal      |10     |D:\gs_d\fy\src\3.0\IocpClass\IocpTest                     |
+|1396|spoolsv.exe                     |                                      |               |0     |Normal      |12     |                                                          |
+|1444|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |20     |                                                          |
+|1604|vmnat.exe                       |VMware NAT Service                    |10.0.0.40273   |0     |Normal      |6      |                                                          |
+|1612|armsvc.exe                      |                                      |               |0     |Normal      |4      |                                                          |
+|1676|FCUpdateService.exe             |                                      |               |0     |Normal      |4      |                                                          |
+|1720|kagent.exe                      |                                      |               |0     |Normal      |16     |                                                          |
+|1752|kbqsvc.exe                      |                                      |               |0     |Normal      |22     |                                                          |
+|1824|sqlservr.exe                    |                                      |               |0     |Normal      |38     |                                                          |
+|1884|msmdsrv.exe                     |                                      |               |0     |Normal      |17     |                                                          |
+|1912|vmnetdhcp.exe                   |VMware VMnet DHCP service             |10.0.0.40273   |0     |Normal      |3      |                                                          |
+|2016|vmware-authd.exe                |                                      |               |0     |Normal      |7      |                                                          |
+|2116|vmware-usbarbitrator64.exe      |                                      |               |0     |Normal      |5      |                                                          |
+|2232|WmiPrvSE.exe                    |WMI Provider Host                     |6.1.7601.17514 |0     |Normal      |9      |                                                          |
+|2300|wb.exe                          |                                      |               |0     |Normal      |1      |D:\clq\wb1                                                |
+|2308|taskhost.exe                    |                                      |               |0     |Normal      |11     |                                                          |
+|2380|delphi32.exe                    |Delphi-32 Development Environment     |7.0.4.453      |0     |Normal      |4      |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|2428|FlashPlayerPlugin_17_0_0_134.exe|Adobe Flash Player 17.0 r0            |17.0.0.134     |0     |Normal      |11     |C:\Windows\SysWOW64\Macromed\Flash                        |
+|2432|dwm.exe                         |                                      |               |0     |Normal      |3      |                                                          |
+|2476|explorer.exe                    |Windows 资源管理器                    |6.1.7601.17514 |0     |Normal      |24     |                                                          |
+|2568|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |10     |                                                          |
+|2716|vmware-hostd.exe                |                                      |               |0     |Normal      |12     |                                                          |
+|2804|RAVCpl64.exe                    |                                      |               |0     |Normal      |11     |                                                          |
+|2880|taskmgr.exe                     |Windows 任务管理器                    |6.1.7601.17514 |0     |High        |6      |                                                          |
+|3012|audiodg.exe                     |                                      |               |0     |Normal      |12     |                                                          |
+|3040|vmware-tray.exe                 |VMware Tray Process                   |10.0.0.40273   |0     |Normal      |3      |C:\Program Files (x86)\VMware\VMware Workstation          |
+|3056|plugin-container.exe            |Plugin Container for Firefox          |37.0.1.5570    |0     |Normal      |10     |D:\Program Files (x86)_win7\Mozilla Firefox               |
+|3112|tencentdl.exe                   |腾讯高速下载引擎                      |1.0.131.2      |0     |Normal      |38     |C:\program files (x86)\common files\tencent\qqdownload\131|
+|3180|wmpnetwk.exe                    |                                      |               |0     |Normal      |12     |                                                          |
+|3284|QQEIM.exe                       |企业QQ                                |1.89.2036.201  |0     |Normal      |30     |D:\Program Files (x86)_win7\Tencent\QQEIM\Bin             |
+|3396|TXPlatform.exe                  |腾讯QQ多客户端管理服务                |7.0.14275.0    |0     |Normal      |4      |d:\Program Files (x86)_win7\Tencent\QQ\Bin                |
+|3552|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |17     |                                                          |
+|4780|SearchProtocolHost.exe          |Microsoft Windows Search Protocol Host|7.0.7600.16385 |0     |Low         |7      |                                                          |
+|4824|FlashPlayerPlugin_17_0_0_134.exe|Adobe Flash Player 17.0 r0            |17.0.0.134     |0     |Normal      |16     |C:\Windows\SysWOW64\Macromed\Flash                        |
+|4884|firefox.exe                     |Firefox                               |37.0.1.5570    |0     |Normal      |53     |D:\Program Files (x86)_win7\Mozilla Firefox               |
+|5000|SearchFilterHost.exe            |Microsoft Windows Search Filter Host  |7.0.7600.16385 |0     |Low         |6      |                                                          |
+|5064|winhlp32.exe                    |Microsoft? Help                       |50.1.7600.16386|0     |Normal      |2      |C:\Windows                                                |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+----------------------
+
+Registers:
+----------
+
+
+
+EurekaLog 6.0.24
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 14 Apr 2015 10:41:45 +0800
+  1.2 Name/Description: iocptest.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Tue, 14 Apr 2015 10:41:45 +0800
+  1.6 Up Time         : 15 seconds
+
+Exception:
+-----------------------------------------------------
+  2.1 Date          : Tue, 14 Apr 2015 10:42:00 +0800
+  2.2 Address       : 77A712F7
+  2.3 Module Name   : 
+  2.4 Module Version: 
+  2.5 Type          : EExternalException
+  2.6 Message       : External exception C0000008.
+  2.7 ID            : 0D25
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : Administrator
+  3.2 Name      : 
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeIncreaseQuotaPrivilege        - OFF
+                  SeTcbPrivilege                  - OFF
+                  SeSecurityPrivilege             - OFF
+                  SeTakeOwnershipPrivilege        - OFF
+                  SeLoadDriverPrivilege           - OFF
+                  SeSystemProfilePrivilege        - OFF
+                  SeSystemtimePrivilege           - OFF
+                  SeProfileSingleProcessPrivilege - OFF
+                  SeIncreaseBasePriorityPrivilege - OFF
+                  SeCreatePagefilePrivilege       - OFF
+                  SeBackupPrivilege               - OFF
+                  SeRestorePrivilege              - OFF
+                  SeShutdownPrivilege             - OFF
+                  SeDebugPrivilege                - OFF
+                  SeSystemEnvironmentPrivilege    - OFF
+                  SeChangeNotifyPrivilege         - ON
+                  SeRemoteShutdownPrivilege       - OFF
+                  SeUndockPrivilege               - OFF
+                  SeManageVolumePrivilege         - OFF
+                  SeImpersonatePrivilege          - ON
+                  SeCreateGlobalPrivilege         - ON
+                  SeIncreaseWorkingSetPrivilege   - OFF
+                  SeTimeZonePrivilege             - OFF
+                  SeCreateSymbolicLinkPrivilege   - OFF
+
+Active Controls:
+------------------------------------------------------------------------
+  4.1 Form Class   : TEditWindow
+  4.2 Form Text    : D:\gs_d\fy\src\3.0\IocpClass\iocpInterfaceClass.pas
+  4.3 Control Class: 
+  4.4 Control Text : 
+
+Computer:
+-----------------------------------------------------------------------------------------------
+  5.1 Name          : 9LKL99GDDECFPQZ
+  5.2 Total Memory  : 4063 Mb
+  5.3 Free Memory   : 2363 Mb
+  5.4 Total Disk    : 139.01 Gb
+  5.5 Free Disk     : 34.46 Gb
+  5.6 System Up Time: 2 hours, 12 minutes, 17 seconds
+  5.7 Processor     : AMD Athlon(tm) 64 X2 Dual Core Processor 4200+
+  5.8 Display Mode  : 1366 x 768, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : NVIDIA GeForce 7025 / NVIDIA nForce 630a (driver 8.17.13.142 - RAM 32 MB)
+  5.11 Printer      : Microsoft XPS Document Writer (driver 6.1.7601.17514)
+
+Operating System:
+--------------------------------------------
+  6.1 Type    : Microsoft Windows 7 (64 bit)
+  6.2 Build # : 7601
+  6.3 Update  : Service Pack 1
+  6.4 Language: Chinese (Simplified)
+  6.5 Charset : 134
+
+Network:
+---------------------------------------------------------------------
+  7.1 IP Address: 192.168.001.233 - 192.168.011.001 - 192.168.220.001
+  7.2 Submask   : 255.255.255.000 - 255.255.255.000 - 255.255.255.000
+  7.3 Gateway   : 192.168.001.010 - 000.000.000.000 - 000.000.000.000
+  7.4 DNS 1     : 114.114.114.114 - 000.000.000.000 - 000.000.000.000
+  7.5 DNS 2     : 000.000.000.000 - 000.000.000.000 - 000.000.000.000
+  7.6 DHCP      : OFF             - OFF             - OFF            
+
+Call Stack Information:
+-------------------------------------------------------------------------------------
+|Address |Module        |Unit                  |Class      |Procedure/Method|Line   |
+-------------------------------------------------------------------------------------
+|Running Thread: ID=4276; Priority=0; Class=; [Main]                                |
+|-----------------------------------------------------------------------------------|
+|777BC44F|KERNELBASE.dll|                      |           |CloseHandle     |       |
+|777BC428|KERNELBASE.dll|                      |           |CloseHandle     |       |
+|004A9BCA|iocptest.exe  |uThreadLock.pas       |TThreadLock|Destroy         |96[2]  |
+|004AB29A|iocptest.exe  |iocpInterfaceClass.pas|TIocpClass |Destroy         |437[60]|
+|004AD268|iocptest.exe  |iocptest.dpr          |           |                |23[4]  |
+-------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name          |Description                                     |Version         |Size    |Modified           |Path                                                                                                          |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|iocptest.exe  |                                                |                |827904  |2015-04-14 10:41:46|D:\gs_d\fy\src\3.0\IocpClass\IocpTest                                                                         |
+|711B0000|uxtheme.dll   |Microsoft UxTheme 库                            |6.1.7600.16385  |245760  |2009-07-14 09:11:26|C:\Windows\system32                                                                                           |
+|71BF0000|wsock32.dll   |Windows Socket 32-Bit DLL                       |6.1.7600.16385  |15360   |2009-07-14 09:16:22|C:\Windows\system32                                                                                           |
+|729F0000|wshtcpip.dll  |Winsock2 帮助程序 DLL (TL/IPv4)                 |6.1.7600.16385  |9216    |2009-07-14 09:16:22|C:\Windows\System32                                                                                           |
+|73650000|comctl32.dll  |公用控件库                                      |5.82.7601.17514 |530432  |2010-11-21 11:24:10|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af|
+|74070000|mswsock.dll   |Microsoft Windows Sockets 2.0 服务提供程序      |6.1.7601.17514  |232448  |2010-11-21 11:24:10|C:\Windows\system32                                                                                           |
+|75550000|version.dll   |Version Checking and File Installation Libraries|6.1.7600.16385  |21504   |2009-07-14 09:16:18|C:\Windows\system32                                                                                           |
+|75650000|CRYPTBASE.dll |Base cryptographic API DLL                      |6.1.7600.16385  |36864   |2009-07-14 09:15:08|C:\Windows\syswow64                                                                                           |
+|75660000|SspiCli.dll   |Security Support Provider Interface             |6.1.7601.17856  |96768   |2012-06-02 12:34:10|C:\Windows\syswow64                                                                                           |
+|75780000|sechost.dll   |Host for SCM/SDDL/LSA Lookup APIs               |6.1.7600.16385  |92160   |2009-07-14 09:16:14|C:\Windows\SysWOW64                                                                                           |
+|759A0000|oleaut32.dll  |                                                |6.1.7601.17676  |571904  |2011-08-27 12:26:28|C:\Windows\syswow64                                                                                           |
+|75A30000|IMM32.DLL     |Multi-User Windows IMM32 API Client DLL         |6.1.7601.17514  |119808  |2010-11-21 11:24:26|C:\Windows\system32                                                                                           |
+|75BF0000|NSI.dll       |NSI User-mode interface DLL                     |6.1.7600.16385  |8704    |2009-07-14 09:16:12|C:\Windows\syswow64                                                                                           |
+|75C00000|user32.dll    |多用户 Windows 用户 API 客户端 DLL              |6.1.7601.17514  |833024  |2010-11-21 11:24:22|C:\Windows\syswow64                                                                                           |
+|75D00000|ws2_32.dll    |Windows Socket 2.0 32 位 DLL                    |6.1.7601.17514  |206848  |2010-11-21 11:23:56|C:\Windows\syswow64                                                                                           |
+|75DC0000|LPK.dll       |Language Pack                                   |6.1.7600.16385  |25600   |2009-07-14 09:11:24|C:\Windows\syswow64                                                                                           |
+|75E70000|kernel32.dll  |Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |1114112 |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|75F80000|RPCRT4.dll    |远程过程调用运行时                              |6.1.7601.17514  |663040  |2010-11-21 11:24:12|C:\Windows\syswow64                                                                                           |
+|76090000|PSAPI.DLL     |Process Status Helper                           |6.1.7600.16385  |6144    |2009-07-14 09:16:14|C:\Windows\syswow64                                                                                           |
+|760B0000|ADVAPI32.dll  |高级 Windows 32 基本 API                        |6.1.7601.17514  |640512  |2010-11-21 11:24:30|C:\Windows\syswow64                                                                                           |
+|76640000|msvcrt.dll    |Windows NT CRT DLL                              |7.0.7601.17744  |690688  |2011-12-16 15:53:00|C:\Windows\syswow64                                                                                           |
+|76750000|ole32.dll     |用于 Windows 的 Microsoft OLE                   |6.1.7601.17514  |1414144 |2010-11-21 11:24:02|C:\Windows\syswow64                                                                                           |
+|76900000|USP10.dll     |Uniscribe Unicode script processor              |1.626.7601.17514|626176  |2010-11-21 11:24:18|C:\Windows\syswow64                                                                                           |
+|769A0000|shell32.dll   |Windows 外壳公用 DLL                            |6.1.7601.17859  |12873728|2012-06-09 12:41:02|C:\Windows\syswow64                                                                                           |
+|775F0000|SHLWAPI.dll   |外壳简易实用工具库                              |6.1.7601.17514  |350208  |2010-11-21 11:23:50|C:\Windows\syswow64                                                                                           |
+|77650000|GDI32.dll     |GDI Client DLL                                  |6.1.7601.17514  |311296  |2010-11-21 11:24:16|C:\Windows\syswow64                                                                                           |
+|776E0000|MSCTF.dll     |MSCTF 服务器 DLL                                |6.1.7600.16385  |828928  |2009-07-14 09:15:44|C:\Windows\syswow64                                                                                           |
+|777B0000|KERNELBASE.dll|Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |274944  |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|77C00000|ntdll.dll     |NT 层 DLL                                       |6.1.7601.17725  |1292080 |2011-11-17 13:38:40|C:\Windows\SysWOW64                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                            |Description                           |Version        |Memory|Priority    |Threads|Path                                                      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|0   |[System Process]                |                                      |               |0     |            |2      |                                                          |
+|4   |System                          |                                      |               |0     |Normal      |95     |                                                          |
+|248 |smss.exe                        |                                      |               |0     |Above-Normal|2      |                                                          |
+|368 |SearchIndexer.exe               |Microsoft Windows Search 索引器       |7.0.7600.16385 |0     |Normal      |11     |                                                          |
+|384 |csrss.exe                       |                                      |               |0     |High        |9      |                                                          |
+|424 |wininit.exe                     |Windows 启动应用程序                  |6.1.7600.16385 |0     |High        |3      |                                                          |
+|452 |csrss.exe                       |                                      |               |0     |High        |10     |                                                          |
+|492 |services.exe                    |                                      |               |0     |Normal      |5      |                                                          |
+|516 |winlogon.exe                    |                                      |               |0     |High        |3      |                                                          |
+|552 |lsass.exe                       |                                      |               |0     |Normal      |8      |                                                          |
+|564 |lsm.exe                         |                                      |               |0     |Normal      |10     |                                                          |
+|668 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |10     |                                                          |
+|740 |delphi32.exe                    |Delphi-32 Development Environment     |7.0.4.453      |0     |Normal      |13     |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|784 |nvvsvc.exe                      |                                      |               |0     |Normal      |5      |                                                          |
+|824 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |9      |                                                          |
+|900 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |15     |                                                          |
+|960 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |18     |                                                          |
+|992 |svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |18     |                                                          |
+|1016|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |28     |                                                          |
+|1080|ZhuDongFangYu.exe               |                                      |               |0     |Normal      |11     |                                                          |
+|1116|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |15     |                                                          |
+|1144|QQEIMPlatform.exe               |                                      |               |0     |Normal      |4      |                                                          |
+|1236|nvxdsync.exe                    |                                      |               |0     |Normal      |7      |                                                          |
+|1248|nvvsvc.exe                      |                                      |               |0     |Normal      |5      |                                                          |
+|1396|spoolsv.exe                     |                                      |               |0     |Normal      |12     |                                                          |
+|1444|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |17     |                                                          |
+|1604|vmnat.exe                       |VMware NAT Service                    |10.0.0.40273   |0     |Normal      |6      |                                                          |
+|1612|armsvc.exe                      |                                      |               |0     |Normal      |4      |                                                          |
+|1676|FCUpdateService.exe             |                                      |               |0     |Normal      |4      |                                                          |
+|1720|kagent.exe                      |                                      |               |0     |Normal      |14     |                                                          |
+|1752|kbqsvc.exe                      |                                      |               |0     |Normal      |19     |                                                          |
+|1824|sqlservr.exe                    |                                      |               |0     |Normal      |38     |                                                          |
+|1884|msmdsrv.exe                     |                                      |               |0     |Normal      |17     |                                                          |
+|1912|vmnetdhcp.exe                   |VMware VMnet DHCP service             |10.0.0.40273   |0     |Normal      |3      |                                                          |
+|2016|vmware-authd.exe                |                                      |               |0     |Normal      |7      |                                                          |
+|2116|vmware-usbarbitrator64.exe      |                                      |               |0     |Normal      |5      |                                                          |
+|2232|WmiPrvSE.exe                    |WMI Provider Host                     |6.1.7601.17514 |0     |Normal      |8      |                                                          |
+|2300|wb.exe                          |                                      |               |0     |Normal      |1      |D:\clq\wb1                                                |
+|2308|taskhost.exe                    |                                      |               |0     |Normal      |11     |                                                          |
+|2380|delphi32.exe                    |Delphi-32 Development Environment     |7.0.4.453      |0     |Normal      |4      |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|2428|FlashPlayerPlugin_17_0_0_134.exe|Adobe Flash Player 17.0 r0            |17.0.0.134     |0     |Normal      |12     |C:\Windows\SysWOW64\Macromed\Flash                        |
+|2432|dwm.exe                         |                                      |               |0     |Normal      |3      |                                                          |
+|2476|explorer.exe                    |Windows 资源管理器                    |6.1.7601.17514 |0     |Normal      |24     |                                                          |
+|2568|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |10     |                                                          |
+|2716|vmware-hostd.exe                |                                      |               |0     |Normal      |12     |                                                          |
+|2804|RAVCpl64.exe                    |                                      |               |0     |Normal      |11     |                                                          |
+|2880|taskmgr.exe                     |Windows 任务管理器                    |6.1.7601.17514 |0     |High        |6      |                                                          |
+|3012|audiodg.exe                     |                                      |               |0     |Normal      |9      |                                                          |
+|3040|vmware-tray.exe                 |VMware Tray Process                   |10.0.0.40273   |0     |Normal      |3      |C:\Program Files (x86)\VMware\VMware Workstation          |
+|3056|plugin-container.exe            |Plugin Container for Firefox          |37.0.1.5570    |0     |Normal      |10     |D:\Program Files (x86)_win7\Mozilla Firefox               |
+|3112|tencentdl.exe                   |腾讯高速下载引擎                      |1.0.131.2      |0     |Normal      |38     |C:\program files (x86)\common files\tencent\qqdownload\131|
+|3180|wmpnetwk.exe                    |                                      |               |0     |Normal      |9      |                                                          |
+|3244|SearchProtocolHost.exe          |Microsoft Windows Search Protocol Host|7.0.7600.16385 |0     |Low         |8      |                                                          |
+|3284|QQEIM.exe                       |企业QQ                                |1.89.2036.201  |0     |Normal      |28     |D:\Program Files (x86)_win7\Tencent\QQEIM\Bin             |
+|3396|TXPlatform.exe                  |腾讯QQ多客户端管理服务                |7.0.14275.0    |0     |Normal      |4      |d:\Program Files (x86)_win7\Tencent\QQ\Bin                |
+|3552|svchost.exe                     |Windows 服务主进程                    |6.1.7600.16385 |0     |Normal      |14     |                                                          |
+|3688|SearchFilterHost.exe            |Microsoft Windows Search Filter Host  |7.0.7600.16385 |0     |Low         |5      |                                                          |
+|4316|iocptest.exe                    |                                      |               |0     |Normal      |2      |D:\gs_d\fy\src\3.0\IocpClass\IocpTest                     |
+|4824|FlashPlayerPlugin_17_0_0_134.exe|Adobe Flash Player 17.0 r0            |17.0.0.134     |0     |Normal      |16     |C:\Windows\SysWOW64\Macromed\Flash                        |
+|4884|firefox.exe                     |Firefox                               |37.0.1.5570    |0     |Normal      |52     |D:\Program Files (x86)_win7\Mozilla Firefox               |
+|5064|winhlp32.exe                    |Microsoft? Help                       |50.1.7600.16386|0     |Normal      |2      |C:\Windows                                                |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+---------------------------------------------------
+77A712DA  xor     eax, eax
+77A712DC  mov     [ecx+$04], eax
+77A712DF  dec     eax
+77A712E0  mov     [ecx+$08], eax
+77A712E3  dec     eax
+77A712E4  mov     edx, [esp+$00C8]
+77A712EB  dec     eax
+77A712EC  mov     [ecx+$10], edx
+77A712EF  mov     [ecx+$18], eax
+77A712F2  call    -$00037D97
+77A712F7  mov     eax, [esp+$00C0]  ; <-- EXCEPTION
+77A712FE  dec     eax
+77A712FF  add     esp, $000000C8    ; ''...
+77A71305  ret
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 0018FF01   ESI: 00000110
+ECX: 00000000   ESP: 0018FE78
+EDX: 00000000   EIP: 77C1F9D2
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0018FE78: 77C1F9D2   77A712F7: 8B 84 24 C0 00 00 00 48 81 C4 C8 00 00 00 C3 90  ..$....H........
+0018FE7C: 777BC455   77A71307: 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90  ................
+0018FE80: 00000110   77A71317: 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90  ................
+0018FE84: 00000110   77A71327: 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90  ................
+0018FE88: 0018FE98   77A71337: 90 90 90 90 90 90 90 90 90 4C 8B D1 B8 00 00 00  .........L......
+0018FE8C: 75E81438   77A71347: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 01 00 00  ......D..L......
+0018FE90: 00000110   77A71357: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 02 00 00  ......D..L......
+0018FE94: 01DBF25C   77A71367: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 03 00 00  ......D..L......
+0018FE98: 0018FEAC   77A71377: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 04 00 00  ......D..L......
+0018FE9C: 004A9BCF   77A71387: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 05 00 00  ......D..L......
+0018FEA0: 00000110   77A71397: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 06 00 00  ......D..L......
+0018FEA4: 00000004   77A713A7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 07 00 00  ......D..L......
+0018FEA8: 01DBEF14   77A713B7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 08 00 00  ......D..L......
+0018FEAC: 0018FEC8   77A713C7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 09 00 00  ......D..L......
+0018FEB0: 004038AF   77A713D7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 0A 00 00  ......D..L......
+0018FEB4: 004AB29F   77A713E7: 00 0F 05 C3 0F 1F 44 00 00 4C 8B D1 B8 0B 00 00  ......D..L......
+
+
+
+EurekaLog 6.0.24
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 14 Apr 2015 15:30:17 +0800
+  1.2 Name/Description: iocptest.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Tue, 14 Apr 2015 15:30:16 +0800
+  1.6 Up Time         : 19 seconds
+
+Exception:
+------------------------------------------------------------
+  2.1 Date          : Tue, 14 Apr 2015 15:30:36 +0800
+  2.2 Address       : 
+  2.3 Module Name   : iocptest.exe
+  2.4 Module Version: 
+  2.5 Type          : EMemoryLeak
+  2.6 Message       : Memory Leak: Total size=145 - Count=3.
+  2.7 ID            : 7D5E
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : Administrator
+  3.2 Name      : 
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeIncreaseQuotaPrivilege        - OFF
+                  SeTcbPrivilege                  - OFF
+                  SeSecurityPrivilege             - OFF
+                  SeTakeOwnershipPrivilege        - OFF
+                  SeLoadDriverPrivilege           - OFF
+                  SeSystemProfilePrivilege        - OFF
+                  SeSystemtimePrivilege           - OFF
+                  SeProfileSingleProcessPrivilege - OFF
+                  SeIncreaseBasePriorityPrivilege - OFF
+                  SeCreatePagefilePrivilege       - OFF
+                  SeBackupPrivilege               - OFF
+                  SeRestorePrivilege              - OFF
+                  SeShutdownPrivilege             - OFF
+                  SeDebugPrivilege                - OFF
+                  SeSystemEnvironmentPrivilege    - OFF
+                  SeChangeNotifyPrivilege         - ON
+                  SeRemoteShutdownPrivilege       - OFF
+                  SeUndockPrivilege               - OFF
+                  SeManageVolumePrivilege         - OFF
+                  SeImpersonatePrivilege          - ON
+                  SeCreateGlobalPrivilege         - ON
+                  SeIncreaseWorkingSetPrivilege   - OFF
+                  SeTimeZonePrivilege             - OFF
+                  SeCreateSymbolicLinkPrivilege   - OFF
+
+Active Controls:
+---------------------------------------
+  4.1 Form Class   : ConsoleWindowClass
+  4.2 Form Text    : Telnet 127.0.0.1
+  4.3 Control Class: 
+  4.4 Control Text : 
+
+Computer:
+-----------------------------------------------------------------------------------------------
+  5.1 Name          : 9LKL99GDDECFPQZ
+  5.2 Total Memory  : 4063 Mb
+  5.3 Free Memory   : 2571 Mb
+  5.4 Total Disk    : 139.01 Gb
+  5.5 Free Disk     : 34.46 Gb
+  5.6 System Up Time: 7 hours, 52 seconds
+  5.7 Processor     : AMD Athlon(tm) 64 X2 Dual Core Processor 4200+
+  5.8 Display Mode  : 1366 x 768, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : NVIDIA GeForce 7025 / NVIDIA nForce 630a (driver 8.17.13.142 - RAM 32 MB)
+  5.11 Printer      : Microsoft XPS Document Writer (driver 6.1.7601.17514)
+
+Operating System:
+--------------------------------------------
+  6.1 Type    : Microsoft Windows 7 (64 bit)
+  6.2 Build # : 7601
+  6.3 Update  : Service Pack 1
+  6.4 Language: Chinese (Simplified)
+  6.5 Charset : 134
+
+Network:
+---------------------------------------------------------------------
+  7.1 IP Address: 192.168.001.233 - 192.168.011.001 - 192.168.220.001
+  7.2 Submask   : 255.255.255.000 - 255.255.255.000 - 255.255.255.000
+  7.3 Gateway   : 192.168.001.010 - 000.000.000.000 - 000.000.000.000
+  7.4 DNS 1     : 114.114.114.114 - 000.000.000.000 - 000.000.000.000
+  7.5 DNS 2     : 000.000.000.000 - 000.000.000.000 - 000.000.000.000
+  7.6 DHCP      : OFF             - OFF             - OFF            
+
+Call Stack Information:
+----------------------------------------------------------------------------------------------
+|Address |Module      |Unit                  |Class            |Procedure/Method     |Line   |
+----------------------------------------------------------------------------------------------
+|+Memory Leak: Type=TTestClass; Total size=8; Count=1                                        |
+|--------------------------------------------------------------------------------------------|
+|004ACD72|iocptest.exe|IocpTestMain.pas      |TForm1           |OnConnectClass       |116[3] |
+|004AB1CA|iocptest.exe|iocpInterfaceClass.pas|TIocpClass       |DoConnect            |634[26]|
+|004ABF81|iocptest.exe|iocpInterfaceClass.pas|TAcceptFastThread|Synchronize_OnConnect|1407[5]|
+|--------------------------------------------------------------------------------------------|
+|                                                                                            |
+|+Memory Leak: Type=TConnectClass; Total size=124; Count=1                                   |
+|--------------------------------------------------------------------------------------------|
+|004AB1DE|iocptest.exe|iocpInterfaceClass.pas|TIocpClass       |DoConnect            |643[35]|
+|004ABF81|iocptest.exe|iocpInterfaceClass.pas|TAcceptFastThread|Synchronize_OnConnect|1407[5]|
+|004ACEB4|iocptest.exe|IocpTestMain.pas      |TForm1           |OnRecvDataClass      |157[20]|
+|004AB343|iocptest.exe|iocpInterfaceClass.pas|TIocpClass       |DoRecv               |699[27]|
+----------------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name          |Description                                     |Version         |Size    |Modified           |Path                                                                                                          |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|iocptest.exe  |                                                |                |827904  |2015-04-14 15:30:18|D:\gs_d\fy\src\3.0\IocpClass\IocpTest                                                                         |
+|71BF0000|wsock32.dll   |Windows Socket 32-Bit DLL                       |6.1.7600.16385  |15360   |2009-07-14 09:16:22|C:\Windows\system32                                                                                           |
+|729F0000|wshtcpip.dll  |Winsock2 帮助程序 DLL (TL/IPv4)                 |6.1.7600.16385  |9216    |2009-07-14 09:16:22|C:\Windows\System32                                                                                           |
+|73650000|comctl32.dll  |公用控件库                                      |5.82.7601.17514 |530432  |2010-11-21 11:24:10|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af|
+|74070000|mswsock.dll   |Microsoft Windows Sockets 2.0 服务提供程序      |6.1.7601.17514  |232448  |2010-11-21 11:24:10|C:\Windows\system32                                                                                           |
+|75550000|version.dll   |Version Checking and File Installation Libraries|6.1.7600.16385  |21504   |2009-07-14 09:16:18|C:\Windows\system32                                                                                           |
+|75650000|CRYPTBASE.dll |Base cryptographic API DLL                      |6.1.7600.16385  |36864   |2009-07-14 09:15:08|C:\Windows\syswow64                                                                                           |
+|75660000|SspiCli.dll   |Security Support Provider Interface             |6.1.7601.17856  |96768   |2012-06-02 12:34:10|C:\Windows\syswow64                                                                                           |
+|75780000|sechost.dll   |Host for SCM/SDDL/LSA Lookup APIs               |6.1.7600.16385  |92160   |2009-07-14 09:16:14|C:\Windows\SysWOW64                                                                                           |
+|759A0000|oleaut32.dll  |                                                |6.1.7601.17676  |571904  |2011-08-27 12:26:28|C:\Windows\syswow64                                                                                           |
+|75A30000|IMM32.DLL     |Multi-User Windows IMM32 API Client DLL         |6.1.7601.17514  |119808  |2010-11-21 11:24:26|C:\Windows\system32                                                                                           |
+|75BF0000|NSI.dll       |NSI User-mode interface DLL                     |6.1.7600.16385  |8704    |2009-07-14 09:16:12|C:\Windows\syswow64                                                                                           |
+|75C00000|user32.dll    |多用户 Windows 用户 API 客户端 DLL              |6.1.7601.17514  |833024  |2010-11-21 11:24:22|C:\Windows\syswow64                                                                                           |
+|75D00000|ws2_32.dll    |Windows Socket 2.0 32 位 DLL                    |6.1.7601.17514  |206848  |2010-11-21 11:23:56|C:\Windows\syswow64                                                                                           |
+|75DC0000|LPK.dll       |Language Pack                                   |6.1.7600.16385  |25600   |2009-07-14 09:11:24|C:\Windows\syswow64                                                                                           |
+|75E70000|kernel32.dll  |Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |1114112 |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|75F80000|RPCRT4.dll    |远程过程调用运行时                              |6.1.7601.17514  |663040  |2010-11-21 11:24:12|C:\Windows\syswow64                                                                                           |
+|76090000|PSAPI.DLL     |Process Status Helper                           |6.1.7600.16385  |6144    |2009-07-14 09:16:14|C:\Windows\syswow64                                                                                           |
+|760B0000|ADVAPI32.dll  |高级 Windows 32 基本 API                        |6.1.7601.17514  |640512  |2010-11-21 11:24:30|C:\Windows\syswow64                                                                                           |
+|76640000|msvcrt.dll    |Windows NT CRT DLL                              |7.0.7601.17744  |690688  |2011-12-16 15:53:00|C:\Windows\syswow64                                                                                           |
+|76750000|ole32.dll     |用于 Windows 的 Microsoft OLE                   |6.1.7601.17514  |1414144 |2010-11-21 11:24:02|C:\Windows\syswow64                                                                                           |
+|76900000|USP10.dll     |Uniscribe Unicode script processor              |1.626.7601.17514|626176  |2010-11-21 11:24:18|C:\Windows\syswow64                                                                                           |
+|769A0000|shell32.dll   |Windows 外壳公用 DLL                            |6.1.7601.17859  |12873728|2012-06-09 12:41:02|C:\Windows\syswow64                                                                                           |
+|775F0000|SHLWAPI.dll   |外壳简易实用工具库                              |6.1.7601.17514  |350208  |2010-11-21 11:23:50|C:\Windows\syswow64                                                                                           |
+|77650000|GDI32.dll     |GDI Client DLL                                  |6.1.7601.17514  |311296  |2010-11-21 11:24:16|C:\Windows\syswow64                                                                                           |
+|776E0000|MSCTF.dll     |MSCTF 服务器 DLL                                |6.1.7600.16385  |828928  |2009-07-14 09:15:44|C:\Windows\syswow64                                                                                           |
+|777B0000|KERNELBASE.dll|Windows NT 基本 API 客户端 DLL                  |6.1.7601.17965  |274944  |2012-10-05 00:47:42|C:\Windows\syswow64                                                                                           |
+|77C00000|ntdll.dll     |NT 层 DLL                                       |6.1.7601.17725  |1292080 |2011-11-17 13:38:40|C:\Windows\SysWOW64                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                      |Description                      |Version        |Memory|Priority    |Threads|Path                                                      |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|0   |[System Process]          |                                 |               |0     |            |2      |                                                          |
+|4   |System                    |                                 |               |0     |Normal      |93     |                                                          |
+|248 |smss.exe                  |                                 |               |0     |Above-Normal|2      |                                                          |
+|368 |SearchIndexer.exe         |Microsoft Windows Search 索引器  |7.0.7600.16385 |0     |Normal      |12     |                                                          |
+|384 |csrss.exe                 |                                 |               |0     |High        |9      |                                                          |
+|424 |wininit.exe               |Windows 启动应用程序             |6.1.7600.16385 |0     |High        |3      |                                                          |
+|452 |csrss.exe                 |                                 |               |0     |High        |11     |                                                          |
+|460 |explorer.exe              |Windows 资源管理器               |6.1.7601.17514 |0     |Normal      |18     |                                                          |
+|492 |services.exe              |                                 |               |0     |Normal      |5      |                                                          |
+|516 |winlogon.exe              |                                 |               |0     |High        |3      |                                                          |
+|552 |lsass.exe                 |                                 |               |0     |Normal      |8      |                                                          |
+|564 |lsm.exe                   |                                 |               |0     |Normal      |9      |                                                          |
+|668 |svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |9      |                                                          |
+|740 |delphi32.exe              |Delphi-32 Development Environment|7.0.4.453      |0     |Normal      |13     |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|784 |nvvsvc.exe                |                                 |               |0     |Normal      |5      |                                                          |
+|824 |svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |8      |                                                          |
+|900 |svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |20     |                                                          |
+|960 |svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |18     |                                                          |
+|992 |svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |18     |                                                          |
+|1012|wb.exe                    |                                 |               |0     |Normal      |1      |D:\clq\wb1                                                |
+|1016|svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |32     |                                                          |
+|1080|ZhuDongFangYu.exe         |                                 |               |0     |Normal      |11     |                                                          |
+|1116|svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |15     |                                                          |
+|1144|QQEIMPlatform.exe         |                                 |               |0     |Normal      |4      |                                                          |
+|1236|nvxdsync.exe              |                                 |               |0     |Normal      |7      |                                                          |
+|1248|nvvsvc.exe                |                                 |               |0     |Normal      |5      |                                                          |
+|1396|spoolsv.exe               |                                 |               |0     |Normal      |13     |                                                          |
+|1444|svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |19     |                                                          |
+|1604|vmnat.exe                 |VMware NAT Service               |10.0.0.40273   |0     |Normal      |6      |                                                          |
+|1612|armsvc.exe                |                                 |               |0     |Normal      |4      |                                                          |
+|1676|FCUpdateService.exe       |                                 |               |0     |Normal      |4      |                                                          |
+|1720|kagent.exe                |                                 |               |0     |Normal      |18     |                                                          |
+|1752|kbqsvc.exe                |                                 |               |0     |Normal      |20     |                                                          |
+|1824|sqlservr.exe              |                                 |               |0     |Normal      |37     |                                                          |
+|1884|msmdsrv.exe               |                                 |               |0     |Normal      |17     |                                                          |
+|1912|vmnetdhcp.exe             |VMware VMnet DHCP service        |10.0.0.40273   |0     |Normal      |3      |                                                          |
+|2016|vmware-authd.exe          |                                 |               |0     |Normal      |7      |                                                          |
+|2028|cmd.exe                   |Windows 命令处理程序             |6.1.7601.17514 |0     |Normal      |1      |                                                          |
+|2116|vmware-usbarbitrator64.exe|                                 |               |0     |Normal      |5      |                                                          |
+|2232|WmiPrvSE.exe              |WMI Provider Host                |6.1.7601.17514 |0     |Normal      |8      |                                                          |
+|2308|taskhost.exe              |                                 |               |0     |Normal      |10     |                                                          |
+|2380|delphi32.exe              |Delphi-32 Development Environment|7.0.4.453      |0     |Normal      |6      |D:\Program Files (x86)_win7\Borland\Delphi7\Bin           |
+|2432|dwm.exe                   |                                 |               |0     |Normal      |3      |                                                          |
+|2476|explorer.exe              |Windows 资源管理器               |6.1.7601.17514 |0     |Normal      |26     |                                                          |
+|2568|svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |10     |                                                          |
+|2716|vmware-hostd.exe          |                                 |               |0     |Normal      |12     |                                                          |
+|2804|RAVCpl64.exe              |                                 |               |0     |Normal      |11     |                                                          |
+|2880|taskmgr.exe               |Windows 任务管理器               |6.1.7601.17514 |0     |High        |6      |                                                          |
+|3040|vmware-tray.exe           |VMware Tray Process              |10.0.0.40273   |0     |Normal      |3      |C:\Program Files (x86)\VMware\VMware Workstation          |
+|3112|tencentdl.exe             |腾讯高速下载引擎                 |1.0.131.2      |0     |Normal      |37     |C:\program files (x86)\common files\tencent\qqdownload\131|
+|3180|wmpnetwk.exe              |                                 |               |0     |Normal      |9      |                                                          |
+|3284|QQEIM.exe                 |企业QQ                           |1.89.2036.201  |0     |Normal      |28     |D:\Program Files (x86)_win7\Tencent\QQEIM\Bin             |
+|3396|TXPlatform.exe            |腾讯QQ多客户端管理服务           |7.0.14275.0    |0     |Normal      |4      |d:\Program Files (x86)_win7\Tencent\QQ\Bin                |
+|3552|svchost.exe               |Windows 服务主进程               |6.1.7600.16385 |0     |Normal      |15     |                                                          |
+|4188|conhost.exe               |                                 |               |0     |Normal      |2      |                                                          |
+|4276|notepad.exe               |记事本                           |6.1.7600.16385 |0     |Normal      |1      |                                                          |
+|4404|iocptest.exe              |                                 |               |0     |Normal      |1      |D:\gs_d\fy\src\3.0\IocpClass\IocpTest                     |
+|4460|telnet.exe                |                                 |               |0     |Normal      |3      |                                                          |
+|5064|winhlp32.exe              |Microsoft? Help                  |50.1.7600.16386|0     |Normal      |2      |C:\Windows                                                |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+----------------------
+
+Registers:
+----------
+
+
